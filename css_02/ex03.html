@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko"> <!-- 한국어문서만 검색할때, 음성으로 할때 한국어 음성지원 -->
+    <head>
+        <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
+        <title>스타일시트</title>
+		<!-- 스타일시트자리 -->
+		<style>
+			.box1{
+				background-color: #ffff00;
+				width: 300px;
+				height: 150px;
+				border-style: solid;
+				border-width: 5px;
+				border-color: #f00;
+			}
+
+			.box2{
+				background-color: #ffff00;
+				width: 500px;
+				height: 150px;
+				border: 1px solid #000;	
+			}
+
+			.box3{
+				background-color: #ffff00;
+				width: 300px;
+				height: 150px;
+				border-top : 1px solid #f00;	
+				border-right: 5px double #f00;
+				border-bottom: 5px dashed #ffff00;
+				border-left: 5px dotted #ff0;
+			}
+
+			
+
+
+		</style>
+    </head>
+
+    <body>
+		<!-- max 이거 이상 늘어나지 않음 -->
+		<!-- min 이거 이상 줄어들지 않음 -->
+		<!-- 실제크기는 padding+border 값 포함해야함 -->
+        
+		<div class="box1">
+			*위치별 선지정<br>
+			가로 300px, 세로 150px<br>
+			배경색 #ffff00<br>
+			선두께 모두 4px<br>
+			선모양 그림참고<br>
+		</div>
+		<br>
+		<div class="box2">
+			*위치별 선지정<br>
+			가로 300px, 세로 150px<br>
+			배경색 #ffff00<br>
+			선두께 모두 4px<br>
+			선모양 그림참고<br>
+		</div>
+
+		<br>
+		<div class="box3">
+			*위치별 선지정<br>
+			가로 300px, 세로 150px<br>
+			배경색 #ffff00<br>
+			선두께 모두 4px<br>
+			선모양 그림참고<br>
+		</div>
+
+    </body>
+
+</html>
+
