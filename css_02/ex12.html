@@ -5,38 +5,72 @@
         <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
         <title>스타일시트</title>
         <!-- 스타일시트자리 -->
-        <style>
-           
+         <style>
+            .box{
+                width: 300px;
+                border: 1px solid #000;
 
-        </style>
-	</div>
+            }
+            .box-red{
+                width: 300px;
+                border: 1px solid #000;
+                background-color: #f00;
+                /*
+                padding: 10px;
+                */
+                /*
+                padding-top : 10px;
+                padding-right: 20px;
+                padding-bottom: 30px;
+                padding-left: 40px;
+                */
+                /*
+                padding: 10px 20px 30px 40px ;
+                */
+                padding: 10px 40px;
+                }
+                .box-blue{
+                    box-sizing: border-box;
+                    width: 260px;
+                    border: 1px solid #000;
+                    background-color: #00f;
+                    padding: 0px 20px;    
+                }
 
-        </style>
+                .i-red{
+                    /*    
+                    width: 300px;*/
+                    border:1px solid #000;
+                    background-color: #f00;
+                    /*
+                    padding: 10px;
+                    */
+                    padding: 10px 20px 30px 40px;
+                }
+         </style>
     </head>
 
     <body>
-        <div class="wrap">
-            <img class="f-img" src="./img/flower.jpg">
-            
-            <p>여름 장이란 애시당초에 글러서, 해는 아직 중천에 있건만 장판은 벌써 쓸쓸하고 더운 햇발이 벌려 놓은 
-                전 휘장 밑으로 등줄기를 훅훅 볶는다. 마을 사람들은 거지반 돌아간 뒤요, 팔리지 못한 나무꾼패가 길거리에 
-                궁싯거리고들 있으나 석유병이나 받고 고깃마리나 사면 족할 이 축들을 바라고 언제까지든지 버티고 있을 법은 없다. 
-                춥춥스럽게 날아드는 파리떼도 장난꾼 각다귀들도 귀찮다. 얼금뱅이요 왼손잡이인 드팀전의 허생원은 기어코 동업의 
-                조선달을 나꾸어 보았다.<br>
-                <br>
-                "그만 거둘까?"<br>
-                <br>
-                "잘 생각했네. 봉평 장에서 한번이나 흐붓하게 사본 일 있었을까. 
-                내일 대화 장에서나 한몫 벌어야겠네."<br>
-                <br>
-                "오늘 밤은 밤을 새서 걸어야 될걸."<br>
-                <br>
-                "달이 뜨렷다." <br>
-                <br>
-            </p>
-
-
+        <div class="box">
+            css에서 가장 보편적이고 많이 사용하는 마진과 패딩 값이
+            어떻게 적용되는지 알아봅시다.
         </div>
+        <br>
+
+        <div class="box-red">
+            css에서 가장 보편적이고 많이 사용하는 마진과 패딩 값이
+            어떻게 적용되는지 알아봅시다.
+        </div>
+    
+
+        <div class="box-blue">
+            css에서 가장 보편적이고 많이 사용하는 마진과 패딩 값이
+            어떻게 적용되는지 알아봅시다.
+        </div>
+        <br>
+        <br>
+        
+        <span class="i-red">인라인요소에서 패딩은?</span>
         
 
     </body>
