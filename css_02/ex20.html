@@ -5,6 +5,7 @@
         <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
         <title>스타일시트</title>
         <!-- 스타일시트자리 -->
+        <link rel="stylesheet"  href="./reset.css"> 
         <link rel="stylesheet"  href="./ex20.css">
 
        
@@ -14,8 +15,14 @@
         <div class="wrap">
             <!-- h1은 사이트명, h2 고객센터 -->
             <h3>일반게시판</h3>
-            
 
+            <ol class="clearfix">
+                <li>홈</li>
+
+                <li>게시판</li>
+                <li>일반게시판</li>
+            </ol>
+            
             <form action="" method="">
                 <!--게시판선택-->
                 <div class="form-group">
@@ -34,13 +41,14 @@
                 <!--제목-->    
                 <div class="form-group">
                     <label for="txt-title" class="form-title">제목</label>
-                    <input id="txt-title" type="text" name="" value="">
+                        <input id="txt-pwd" type="password" name="" value="">
                 </div>    
 
                 <!--비밀번호-->
                 <div class="form-group">
                     <label for="txt-pwd" class="form-title">비밀번호</label>
                     <input id="txt-pwd" type="password" name="" value="">
+
                 </div>
 
                 <!--공개범위-->    
@@ -86,6 +94,15 @@
                     <label for="txt-file" class="form-title">첨부파일</label>
                     <input id="txt-file" type="file">
                 </div>
+
+                <!--제목-->    
+                <div class="form-group">
+                    <label for="txt-title" class="form-title">제목</label>
+                    <div>
+                        <input id="txt-pwd" type="password" name="" value="">
+                        <input id="txt-pwd" type="password" name="" value="">
+                    </div>
+                </div> 
                 
                
                 <div class="btn-group">

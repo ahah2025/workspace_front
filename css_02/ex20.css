@@ -1,20 +1,5 @@
  @charset "UTF-8";
 
-/* 초기화 */
-
-/* 바디와 div는 같은 성격의 html 태그
-ul~ol까지 같은 성격의 Html 태그
-h1~h6까지 같은 성격의 HTml 태그
-form~legend까지 같은 성격의 HTml 태그
-p~tr까지 같은 성격의 HTml 태그*/
-
-body, div, 
-ul, li, dl, dt, ol, 
-h1, h2, h3, h4, h5, h6, 
-form, input, select, textarea, button, fieldset, legend,
-p, table, th, td, tr{
-    margin: 0; padding: 0;
-} 
 
 body{
     background-color: #808080;
@@ -27,11 +12,32 @@ body{
     background-color: #fff;
 }
 
-.wrap h3{
+.wrap>h3{
     font-size: 18px;
     font-weight: bold;
     /* border:1px solid black; */
- }
+}
+/* 경로표시 */
+.wrap>ol{
+    list-style: none;
+    margin: 10px 0px 10px 0px ;
+}
+
+.wrap>ol>li{
+    float: left;
+
+}
+
+.wrap>ol>li::after{
+    content: ">";
+    padding: 0px 5px 0px 5px;
+}
+.wrap>ol>li::after-child::after{
+    content: "";
+}
+.wrap>ol>li:last-child::after{
+    content: "";
+}
 
 /*공통*/
 .form-group{

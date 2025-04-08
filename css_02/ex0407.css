@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+body, div, 
+ul, li, dl, dt, ol, 
+h1, h2, h3, h4, h5, h6, 
+form, input, select, textarea, button, fieldset, legend,
+p, table, th, td, tr{
+    margin: 0; padding: 0;
+} 
+
+body{
+    background-color: #808080;
+    font-family: "맑은고딕";
+    font-size: 12px;
+}
+
+.wrap{
+    width: 600px;
+    background-color: #fff;
+}
+
+/*공통*/
+.form-group{
+    margin: 0px 0px 10px 0px;
+}
+
+.form-group .form-title{
+    display: inline-block;
+    width: 120px;
+}
+
+/*아이디*/
+/* .form-group #sel-board{
+    width: 190px;
+} */
+
+/*패스워드*/
+.form-group #txt-pwd{
+    width: 190px;
+}
+
+/*이름*/
+.form-group #txt-name{
+    width: 190px;
+}
+
+.wrap h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*버튼그룹*/
+.btn-group{
+    padding: 10px;
+    border-top: 1px solid #000;
+    text-align: center;
+}
+
+.btn-group button{
+    width: 120px;
+}
