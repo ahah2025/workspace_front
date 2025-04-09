@@ -30,9 +30,9 @@ body{
 }
 
 /*아이디*/
-/* .form-group #sel-board{
+.form-group #sel-board{
     width: 190px;
-} */
+} 
 
 /*패스워드*/
 .form-group #txt-pwd{
