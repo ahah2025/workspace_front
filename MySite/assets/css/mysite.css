@@ -167,26 +167,13 @@ body{
 
 /* 컨텐츠2(게시판리스트) ----------------------*/
 
-table>tbody>tr.chapter{
-    border-bottom: 2px solid #ff0000;
-    text-align: center;
-}
-
-table{
-    border-collapse: collapse ;
-    text-align: center;
-}
-
 .btn-sech{
-    padding: 15px 0px 10px 0px;
-    border-bottom:1px solid #585858; 
-}
-
-/*-글쓰기*/
-
-.writing{
     text-align: right;
+    border-bottom: 1px solid #585858;
+    padding: 15px 0px 10px 0px
+    
 }
+
 
 /* 푸터 ----------------------*/
 #footer p{

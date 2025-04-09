@@ -13,8 +13,7 @@
         <div id="wrap">
             <div id="header" class="clearfix">
                 <h1>MySite</h1>
-
-                <ul class="clearfix">
+                <ul>
                     <li>
                         <a href="">로그인</a>
                     </li>
@@ -22,7 +21,9 @@
                         <a href="">회원가입</a>
                     </li>
                 </ul>
+                
             </div>
+            <!-- header -----*** End *** -->
 
             <div id="nav">
                 <ul class="clearfix">
@@ -32,122 +33,120 @@
                     <li>방명록</li>
                 </ul>
             </div>
+            <!-- nav -----*** End *** -->
 
-        <div id="content2" class="clearfix">
-            <div id="aside">
-                <h2>게시판</h2>
-                <ul>
-                    <li >일반게시판</li>
-                    <li>댓글게시판</li>
-                </ul>
+            <div id="content2" class="clearfix">
+                <div id="aside">
+                    <h2>게시판</h2>
+                    <ul>
+                        <li >일반게시판</li>
+                        <li>댓글게시판</li>
+                    </ul>
+                </div> 
+                <!-- aside-----*** End ***  -->
 
-            </div>
-
-
-            
             <div id="main">
                 <div id="main-head" class="clearfix">
                     <h3>일반게시판</h3>
-                    <ol class="clearfix">
-                        <li>홈</li>
-                        <li>게시판</li>
-                        <li>일반게시판</li>
-                    </ol>
-                
-                </div>
-                
-                <div>
-                    
-                    <div class="btn-sech" class="clearfix">
-                        <input id="txt-search" type="" name="" value="">
-                        <button type="submit">검색</button>
-                    </div>
-
-                    <table>
-                        <colgroup>
-                            <col style="width:90px;">
-                            <col style="width:390px;">
-                            <col style="width:100px;">
-                            <col style="width:100px;">
-                            <col style="width:210px;">
-                            <col style="width:110px;">
-                        </colgroup>
-                            <thead>
-                                <tr>
-                                    <th>번호</th>
-                                    <th>제목</th>
-                                    <th>글쓴이</th>
-                                    <th>조회수</th>
-                                    <th>작성일</th>
-                                    <th>관리</th>
-                                </tr>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td class="chapter">
-                                        <a href="">게시판 게시글입니다.</td></a>
-                                    <td>이효리</td>
-                                    <td>121</td>
-                                    <td>2020-01-02</td>
-                                    <td>삭제</td>
-                                </tr>
-
-                                <tr>
-                                    <td>2</td>
-                                    <td class="chapter">
-                                        <a href="">게시판 게시글입니다.</td></a>
-                                    <td>강호동</td>
-                                    <td>121</td>
-                                    <td>2020-01-03</td>
-                                    <td>삭제</td>
-                                </tr>
-
-                                <tr>
-                                    <td>3</td>
-                                    <td class="chapter"> 
-                                        <a href="">게시판 게시글입니다.</td></a>
-                                    <td>이광수</td>
-                                    <td>121</td>
-                                    <td>2020-01-04</td>
-                                    <td>삭제</td>
-                                </tr>
-
-                                <tr>
-                                    <td>4</td>
-                                    <td class="chapter">
-                                        <a href="">게시판 게시글입니다.</td></a>
-                                    <td>정우성</td>
-                                    <td>121</td>
-                                    <td>2020-01-05</td>
-                                    <td>삭제</td>
-                                </tr>
-
-                                <tr>
-                                    <td>5</td>
-                                    <td class="chapter">
-                                        <a href="">게시판 게시글입니다.</td></a>
-                                    <td>유재석</td>
-                                    <td>121</td>
-                                    <td>2020-01-06</td>
-                                    <td>삭제</td>
-                                </tr>
-                            </tbody>        
-
-                            </thead>
-                    </table>
-                </div>
-                   <button type="submit" class="writing">글쓰기</button>
-                </div>
+                        <ol class="clearfix">
+                            <li>홈</li>
+                            <li>게시판</li>
+                            <li>일반게시판</li>
+                        </ol>
+                </div>   
+                <div class="btn-sech" >
+                    <input type="" name="" value="">
+                    <button type="submit">검색</button>
+                </div>             
             </div>
+            <!-- content2 -----*** End ***          -->
+            <table>
+                <colgroup>
+                    <col style="width:90px;">
+                    <col style="width:390px;">
+                    <col style="width:100px;">
+                    <col style="width:100px;">
+                    <col style="width:210px;">
+                    <col style="width:110px;">
+                </colgroup>
 
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>글쓴이</th>
+                        <th>조회수</th>
+                        <th>작성일</th>
+                        <th>관리</th>
+                    </tr>
+                </thead>
 
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="chapter">
+                            <a href="">게시판 게시글입니다.</td></a>
+                        <td>이효리</td>
+                        <td>121</td>
+                        <td>2020-01-02</td>
+                        <td>삭제</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td class="chapter">
+                            <a href="">게시판 게시글입니다.</td></a>
+                        <td>강호동</td>
+                        <td>121</td>
+                        <td>2020-01-03</td>
+                        <td>삭제</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td class="chapter"> 
+                            <a href="">게시판 게시글입니다.</td></a>
+                        <td>이광수</td>
+                        <td>121</td>
+                        <td>2020-01-04</td>
+                        <td>삭제</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td class="chapter">
+                            <a href="">게시판 게시글입니다.</td></a>
+                        <td>정우성</td>
+                        <td>121</td>
+                        <td>2020-01-05</td>
+                        <td>삭제</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td class="chapter">
+                            <a href="">게시판 게시글입니다.</td></a>
+                        <td>유재석</td>
+                        <td>121</td>
+                        <td>2020-01-06</td>
+                        <td>삭제</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
         </div>
+        <!-- wrap -----*** End ***   -->
 
-            <div id="footer">
-                <p>
-                    Copyright ⓒ 2025 이아름. All right reserved
-                </p>
 
-            </div>
+       
+
+        <div id="footer">
+            <p>
+                Copyright ⓒ 2025 이아름. All right reserved
+            </p>
+        </div>
+        <!-- footer -----*** End *** -->
+
     </body>
 </html>
