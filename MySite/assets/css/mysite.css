@@ -50,8 +50,6 @@ body{
 }
 /*2단-----------End-*/
 
-
-
 #footer{
     padding: 10px 0px 10px 0px;
     background-color: #dddddd;
@@ -171,8 +169,21 @@ body{
     text-align: right;
     border-bottom: 1px solid #585858;
     padding: 15px 0px 10px 0px
-    
 }
+
+table>thead>tr>.tbth{
+    border-bottom: red;
+}
+
+table>thead>tr>th{
+    height: 20px;
+}
+
+table>tbody>tr>td{
+    text-align: center;
+    padding: 5px 0px 5px 3px;
+}
+
 
 
 /* 푸터 ----------------------*/

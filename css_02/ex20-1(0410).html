@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="ko"> <!-- 한국어문서만 검색할때, 음성으로 할때 한국어 음성지원 -->
+    <head>
+        <meta charset="UTF-8"> <!-- 브라우저가 문서를 해석할때 필요한 정보 -->
+        <title>스타일시트</title>
+        <!-- 스타일시트자리 -->
+         <link rel="stylesheet" href="./ex20-01(0410).css">
+         <style>
+            
+         </style>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <!-- h1 사이트명, h2 고객센터 -->
+            <h3>일반게시판(20250410 연습)</h3>
+
+            <!-- 게시판선택 -->
+            <div class="form-group">
+                <label for="sel-board" class="form-title">게시판선택</label>
+                <select id="sel-board">
+                    <option>선택해주세요</option>
+                    <option>공지사항</option>
+                    <option>가입인사</option>   
+                    <option>유머게시판</option>   
+                    <option>기타게시판</option>     
+                </select>
+            </div>
+            <!-- 게시판선택 End     -->
+            
+            <!-- 제목 Start -->
+            <div class="form-group">
+                <label for="txt-title" class="form-title">제목</label>
+                <input id="txt-title" type="text" name="" value="">
+            </div>
+            <!-- 제목 End -->
+
+            <!-- 비밀번호 -->
+            <div class="form-group">
+                <label for="txt-pwd" class="form-title">비밀번호</label>
+                <input id="txt-pwd" type="password" name="" value="">
+            </div>
+             <!-- 비밀번호 End -->
+            <!-- 공개범위 -->
+            <div class="form-group">
+                <span class="form-title">공개범위</span>
+
+                <label for="rdo-me">본인</label>
+                <input id="rdo-me" type="radio" name="range" value="">
+
+                <label for="rdo-login">로그인회원</label>
+                <input id="rdo-login" type="radio" name="range" value="">
+
+                <label for="rdo-friend">친구</label>
+                <input id="rdo-friend" type="radio" name="range" value="">
+
+                <label for="rdo-all">전체</label>
+                <input id="rdo-all" type="radio" name="range" value="">
+
+            </div>
+            <!-- 공개범위 End -->
+
+            <!-- 허용범위 -->
+            <div class="form-group">
+                <span class="form-title">허용범위</span>
+
+                <label>댓글허용</label>
+                <input type="checkbox" name="" value="" >
+                
+                <label>답글허용</label>
+                <input type="checkbox" name="" value="" >
+
+                <label>좋아요허용</label>
+                <input type="checkbox" name="" value="" >
+
+            </div> 
+
+        </div>
+        <!-- wrap  끝남  End      -->
+        
+
+    </body>
+
+</html>
