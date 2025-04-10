@@ -1,12 +1,28 @@
 @charset "UTF-8";
 
+/* 초기화 */
 body, div, 
 ul, li, dl, dt, ol, 
 h1, h2, h3, h4, h5, h6, 
 form, input, select, textarea, button, fieldset, legend,
 p, table, th, td, tr{
-    margin: 0; padding: 0;
+    margin: 0px; padding: 0px;
 } 
+
+/* clearfix */
+.clearfix::before, .clearfix::after {
+    display: block; 
+    content: ""; 
+    line-height:0;
+}
+.clearfix::after {
+    clear: both;
+}
+
+input, select, textarea{
+    font-family: "맑은고딕";
+    font-size: 15px;
+}
 
 body{
     background-color: #808080;
@@ -19,43 +35,90 @@ body{
     background-color: #fff;
 }
 
-/*공통*/
-.form-group{
-    margin: 0px 0px 10px 0px;
-}
-
-.form-group .form-title{
-    display: inline-block;
-    width: 120px;
-}
-
-/*아이디*/
-.form-group #sel-board{
-    width: 190px;
-} 
-
-/*패스워드*/
-.form-group #txt-pwd{
-    width: 190px;
-}
-
-/*이름*/
-.form-group #txt-name{
-    width: 190px;
-}
-
 .wrap h3{
     font-size: 18px;
     font-weight: bold;
 }
 
-/*버튼그룹*/
-.btn-group{
-    padding: 10px;
-    border-top: 1px solid #000;
+/* 공통 */
+.wrap .form-group{
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.form-title{
+    vertical-align: top;
+    display: inline-block;
+    width: 120px;
     text-align: center;
 }
 
+ul{
+    list-style-type: none;
+    padding: 5px 0px 10px 0px;
+}
+ul>li{
+    float: left;
+}
+
+ul>li::after{
+    content: ">";
+    padding: 0px 5px 0px 5px;
+}
+ul>li:last-child::after{
+    content: none;
+}
+
+/* 아이디 */
+/* 패스워드 */
+/* 이름 */
+/* 이동통신사 */
+/* 주소 */
+.form-group #id,
+.form-group #pw,
+.form-group #nm,
+.form-group #telecom{
+    width: 180px;
+}
+
+/* 주소 */
+#address{
+    width: 180px;
+    margin-bottom: 5px;
+}
+
+#address2{
+    width: 380px;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* 혈액형, 나이, 취미 */
+.form-group input[type="radio"],
+.form-group input[type="checkbox"]{
+    margin-right: 10px;
+}
+
+.form-group span~label{
+    font-size: 15px;
+}
+
+/* 자기소개 */
+textarea{
+    width: 402px; 
+    height: 100px;
+    vertical-align: top;
+}
+
+/* 버튼그룹 */
+.btn-group{
+    text-align: center;
+    padding-bottom: 10px;
+}
 .btn-group button{
     width: 120px;
+    height: 30px;
 }
