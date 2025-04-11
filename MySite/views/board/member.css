@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+body, div, 
+ul, li, dl, dt, ol, 
+h1, h2, h3, h4, h5, h6, 
+form, input, select, textarea, button, fieldset, legend,
+p, table, th, td, tr{
+    margin: 0; padding: 0;
+} 
+
+/* clearfix */
+.clearfix::before, .clearfix::after {
+    display: block; 
+    content: ""; 
+    line-height:0;
+}
+.clearfix::after {
+    clear: both;
+}
+
+/* 레이아웃 *****************************************/
+body{
+    font-family: "맑은고딕";
+    font-size: 12px;
+    color: #000;
+}
+#wrap{
+    width: 1000px;
+    margin: 0px auto;
+}
+
+#header{
+    padding: 10px 0px 10px 0px;
+    border-bottom:1px solid #585858;  
+}
+
+#nav{
+    padding: 10px 0px 10px 0px;
+    border-bottom:1px solid #585858; 
+}
+
+/*border-bottom 선을 만들어주는 것 */
+
+/*1단*/
+#content{
+    padding: 20px 20px 20px 20px;
+}
+/*1단-----End-*/
+
+/*2단-----------start-*/
+#content2{
+    padding: 20px 0px 200px 0px;
+}
+
+#content2 #aside{
+    width: 180px;
+    margin-right: 20px;
+    float: left;
+}
+
+#content2 #main{
+    width: 798px;
+    float: left;
+}
+/*2단-----------End-*/
+
+#footer{
+    padding: 10px 0px 10px 0px;
+    background-color: #dddddd;
+}
+
+/* 레이아웃 ****************************End**/
+
+/* 헤더관련 **************************Start*/
+
+#header h1{
+    font-size: 35px;
+    color: #79b30b;
+    font-weight: bold;
+    float: left;
+}
+
+#header ul{
+    float: right;
+    margin-top: 14px;
+}
+
+#header ul li{
+    float: left;
+    padding:3px 5px 3px 5px ;
+    margin-left: 10px;
+    border-radius: 3px;
+    background-color: #e3e3e3;
+    border:1px solid #c0c0c0;
+}
+/* 헤더관련 **************************End*/
+
+/* 네비--------------------------------start */
+
+#nav ul li{
+    width: 250px;
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 컨텐츠(메인)------------------ */
+#profile{
+    width: 300px;
+    float: left;
+    margin-right: 20px;
+}
+
+/* 컨텐츠2(게시판리스트) ***************/
+
+#aside h2{
+    width: 180px;
+    height: 60px; /*height 과 line-height 둘다 '같은 값의 px' 입력해야 함*/
+    line-height: 60px; /*height 과 line-height 둘다 '같은 값의 px' 입력해야 함*/
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #dddddd;
+}
+
+#greeting-box{
+    width: 630px;
+    float: left;
+}
+
+ul>li{
+    list-style: none;
+}
+
+#aside ul>li{
+    padding: 8px 10px 8px 10px;
+    margin: 5px 0px 0px 0px;
+    font-size: 15px;
+    border: 1px solid #a6a6a6;
+    text-align: center;
+}
+
+#main #main-head{
+    padding: 15px 0px 10px 0px;
+    border-bottom: 1px solid #000;
+}
+
+#greeting-box .greeting{
+    margin-bottom: 20px;
+}
+
+#main #main-head h3{
+    float:left;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+#main>#main-head>ol{
+    float: right;
+    margin-top: 10px;
+}
+
+#greeting-box .introduce{
+    font-size: 15px;
+}
+
+#main>#main-head>ol>li{
+    list-style: none;
+}
+
+#main>#main-head>ol>li{
+    padding: 20px 0px 0px 0px;
+    float: left;
+}
+
+#main>#main-head>ol>li::after{
+    content: ">";
+    padding: 0px 0px 0px 3px;
+}
+
+#main #main-head>ol>li:last-child::after{
+    content: ""; /*last-child::after 는 ">" 삭제하는 태그*/
+    padding: 0px 0px 0px 0px;
+}
+
+/* 컨텐츠2(게시판리스트) ----------------------*/
+
+.btn-sech{
+    text-align: right;
+    border-bottom: 1px solid #585858;
+    padding: 15px 0px 10px 0px
+}
+
+table>thead>tr>.tbth{
+    border-bottom: red;
+}
+
+table>thead>tr>th{
+    height: 20px;
+}
+
+table>tbody>tr>td{
+    text-align: center;
+    padding: 5px 0px 5px 3px;
+}
+
+/* 푸터 ----------------------*/
+#footer p{
+    text-align: center;
+}

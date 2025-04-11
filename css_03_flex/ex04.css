@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+.container{
+    width: 500px;
+    height: 200px;
+    margin-bottom: 20px;
+    border: 3px solid #000;
+}
+
+.container.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    /* align-items: flex-start; 를 기재해두고, 
+    align-content: stretch;를 적용하면 
+    'stretch'를 입력하면 안먹고
+    align-items: flex-start 먼저 적용됨*/
+    
+    flex-wrap: wrap;
+    /* align-content: flex-start; */
+    /* align-content: flex-End; */
+    /* align-content: center; */
+    /* align-content: space-between; */
+    /* align-content: space-around; */
+    /* align-content: space-evenly; */
+    align-content: stretch;
+} 
+
+.container.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap-reverse;
+}
+/* 부모속성: container */
+
+/* 자식속성: item1,item2,item3 */
+.item1{
+    border: 3px solid #ff0000;
+}
+
+.item2{
+    border: 3px solid #0000ff;
+}
+
+.item3{
+    border: 3px solid #00ff00;
+}
