@@ -1,0 +1,104 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+
+    </head>
+
+    <body>
+        <h1>자바스크립트</h1>
+
+        <script>
+            console.log('===========================');
+            console.log('#변수선언');
+
+            //int no = 3; --> 자료형 표기하지 않는다
+            let no = 3;
+            var str = '안녕하세요';
+            var boo = 3>5;
+
+            var year, month, day;
+            year ='2025';
+            month = '7';
+            console.log(year)
+            console.log(month);    
+
+            let no2 = 3;
+            let str2 = '안녕하세요';
+            let boo2 = 3>5;
+            let year2, month2, day2;
+            year2 = '2025';
+            console.log(year2)
+
+            console.log('===========================');
+            var name ='정우성';   
+            console.log(name);
+
+            var name = '유재석'; //같은 이름의 변수가 선언된다(덮어쓴다) --정상
+            console.log(name);
+
+            console.log('--------------------------------------');
+            let name2 = '유재석';
+            console.log(name);
+
+            //let name2 = '정우성';  //name2가 let으로 선언되어서 중복에러
+            console.log(name);
+
+            // 결론 -->let을 쓰자!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+            console.log('===========================');
+            console.log('#상수 선언방법 const');
+
+            const PI = 3.14;
+            //PI = 3.141592;      //상수는 값을 변경할 수 없다
+            console.log(PI);
+
+            /*
+            //상수는 변수선언과 동시에 초기화(값을 넣는다)해 줘야 한다
+            const MAX;
+            MAX=3;
+            */
+
+            console.log('===========================');
+            console.log('#값 대입시 자료형이 결정된다');
+
+            let data;
+            console.log(typeof data);   //undefined          
+
+            data = 15;
+            console.log(typeof data);   //number
+
+            data = '안녕하세요';
+            console.log(typeof data);   //String
+        
+            date = 5>3
+            console.log(typeof data);    //boolean
+        
+            //타입스크립트 => 자료형을 결정해야 한다
+
+            console.log('===========================');
+            console.log('#undefined vs null');
+            let myVar1;    
+            let myVar2 = null;
+
+            console.log(myVar1); //undefined
+            console.log(myVar2); //null
+
+            console.log('===========================');
+            console.log('# == vs ===');
+
+            console.log('123' == 123);   //true
+            console.log('123' === 123);  //false
+
+            console.log(myVar1 == myVar2);   //
+            console.log(myVar1 === myVar2);  //
+            
+            console.log(''==false);
+            console.log(''== 0);
+            console.log(0 == false);
+
+
+        </script>    
+    </body>
+</html>

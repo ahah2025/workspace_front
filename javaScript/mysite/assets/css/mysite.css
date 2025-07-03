@@ -1,0 +1,147 @@
+@charset "UTF-8";
+/********************************
+ * MySite 공통
+********************************/
+
+/* 레이아웃 ************************/
+body{
+    font-family: "맑은 고딕";
+    font-size: 12px;
+    color: #000;
+}
+#wrap{
+    width: 1000px;
+    margin: 0px auto;
+}
+
+#header{
+    padding: 10px 0px 10px 0px;
+    border-bottom: 1px solid #585858;
+}
+
+#nav{
+    padding: 10px 0px 10px 0px;
+    border-bottom: 1px solid #585858;
+}
+
+/* 1단 */
+#content{
+    padding: 20px 20px 20px 20px; 
+}
+
+/* 2단 */
+#content2{
+    padding: 20px 0px 20px 0px;
+}
+
+#content2 #aside{
+    width: 160px;
+    margin-right: 20px;
+    float: left;
+}
+
+#content2 #main{
+    width: 798px;
+    float: left;
+}
+
+#footer{
+    padding: 10px 0px 10px 0px;
+    background-color: #dddddd;
+}
+/* /레이아웃 ************************/
+
+/* 해더관련 *************************/
+#header h1{
+    font-size: 35px;
+    color: #79b30b;
+    font-weight: bold;
+
+    float: left;
+}
+
+#header ul{
+    float: right;
+    margin-top: 14px;
+}
+
+#header ul>li{
+    float: left;
+    padding:3px 5px 3px 5px;
+    margin-left: 10px;
+    border-radius: 3px;;
+    background-color: #e3e3e3;
+    border: 1px solid #c0c0c0;
+}
+/* /해더관련 *************************/
+
+/* 네비 ******************************/
+
+#nav ul>li{
+    width: 250px;
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* /네비 ******************************/
+
+
+
+/* 컨텐츠2(게시판리스트) ******************************/
+#aside h2{
+    width: 160px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #dddddd;
+}
+
+#aside ul>li{
+    padding: 8px 10px 8px 10px;
+    margin: 5px 0px 0px 0px; 
+    font-size: 15px;
+    border: 1px solid #a6a6a6;
+}
+
+#main #main-head{
+    padding: 15px 0px 10px 0px;
+    border-bottom: 1px solid #000;;
+}
+
+#main #main-head h3{
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+#main #main-head ol {
+    float: right;
+    margin-top: 10px;
+}
+
+#main #main-head ol>li{
+    float: left;
+}
+
+#main #main-head ol>li::after{
+    content: ">";
+    padding: 0px 3px 0px 3px;
+}
+
+#main #main-head ol>li:last-child::after{
+    content: "";
+    padding: 0px 0px 0px 0px;
+}
+
+
+/* 컨텐츠2(게시판리스트) ******************************/
+
+
+/* 푸터 ******************************/
+#footer p{
+    text-align: center;
+}
+/* 푸터 ******************************/

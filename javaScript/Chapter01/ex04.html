@@ -1,0 +1,40 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+
+    </head>
+
+    <body>
+        <h1>자바스크립트</h1>
+
+        <script>
+            console.log('===============================');        
+            console.log('#if문');
+
+            let no = window.prompt('숫자를 입력해 주세요');
+            console.log(no);
+            console.log(typeof no); //String
+
+            if(no>0){                  //no가 number형으로 변경되서 계산된다
+                console.log('양수');
+            }else(no<0){
+                console.log('음수');
+            }else {
+                console.log('0');
+            }
+
+
+            //프롬프트에 60을 입력하고 테스트
+            //프롬프트에서 받은 값은 string 이다
+            if(no == 60){   //'60' == 60  느슨하게 비교
+                console.log('같다');  //출력된다
+            }
+
+            if(no == 60){  //'60' === 60 엄격하게 비교       
+                console.log('다르다');    //출력되지 않는다
+            }
+
+        </script>
+    </body>
+</html>

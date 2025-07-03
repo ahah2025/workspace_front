@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+/********************************************************************
+* user(회원가입폼, 회원정보수정폼, 로그인 등)관련 페이지에서만 사용하는 css
+*********************************************************************/
+
+
+/* 회원가입폼 */
+#user-joinform .form-box{
+    width: 550px;
+    margin: 0px auto;
+    padding: 30px 10px 30px 10px;
+    border: 1px solid #A6A6A6;
+}
+
+#user-joinform .form-box .form-group {
+    padding: 10px 0px 10px 0px;
+}
+
+#user-joinform .form-box .form-group .form-txt {
+    display: inline-block;
+    width: 180px;
+    padding-right: 20px;
+    text-align: right;
+}
+
+#user-joinform .form-box .form-group input[type="text"],
+#user-joinform .form-box .form-group input[type="password"] {
+    width: 170px;
+    height: 25px;
+}
+
+#user-joinform .form-box .form-group #btn-idcheck{
+    height: 25px;
+    padding: 0px 3px 0px 3px;
+}
+
+
+#user-joinform .form-box .form-group input[type="radio"]{
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+#user-joinform .form-box .form-group input[type="checkbox"]{
+    width: 16px;
+    height: 16px;
+    vertical-align: top;
+}
+
+
+#user-joinform .form-box .btn-group{
+    padding: 40px 0px 0px 0px;
+    text-align: center;
+}
+
+
+#user-joinform .form-box .btn-group #btn-join{
+    width: 140px;
+    height: 35px;
+    border: 1px solid #A6A6A6;
+    border-radius: 2px;
+    background-color: #E5E5E5;
+    font-size: 14px;
+}
+/* //회원가입폼 */
+
+/* 회원정보 수정폼 */
+#user-editform .form-box{
+    width: 550px;
+    margin: 0px auto;
+    padding: 30px 10px 30px 10px;
+    border: 1px solid #A6A6A6;
+}
+
+#user-editform .form-box .form-group {
+    padding: 10px 0px 10px 0px;
+}
+
+#user-editform .form-box .form-group .form-txt {
+    display: inline-block;
+    width: 180px;
+    padding-right: 20px;
+    text-align: right;
+}
+
+#user-editform .form-box .form-group #txt-id {
+    display: inline-block;
+    height: 25px;
+}
+
+#user-editform .form-box .form-group input[type="text"],
+#user-editform .form-box .form-group input[type="password"] {
+    width: 170px;
+    height: 25px;
+}
+
+#user-editform .form-box .form-group input[type="radio"]{
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+#user-editform .form-box .btn-group{
+    padding: 40px 0px 0px 0px;
+    text-align: center;
+}
+
+#user-editform .form-box .btn-group #btn-edit{
+    width: 140px;
+    height: 35px;
+    border: 1px solid #A6A6A6;
+    border-radius: 2px;
+    background-color: #E5E5E5;
+    font-size: 14px;
+}
+/* //회원정보 수정폼 */
+
+/* 로그인폼 */
+#user-loginform .form-box{
+    width: 550px;
+    margin: 0px auto;
+    padding: 30px 10px 30px 10px;
+    border: 1px solid #A6A6A6;
+}
+
+#user-loginform .form-box .form-group {
+    padding: 10px 0px 10px 0px;
+}
+
+#user-loginform .form-box .form-group .form-txt {
+    display: inline-block;
+    width: 180px;
+    padding-right: 20px;
+    text-align: right;
+}
+
+#user-loginform .form-box .form-group input[type="text"],
+#user-loginform .form-box .form-group input[type="password"] {
+    width: 170px;
+    height: 25px;
+}
+
+#user-loginform .form-box .btn-group{
+    padding: 40px 0px 0px 0px;
+    text-align: center;
+}
+
+#user-loginform .form-box .btn-group #btn-login{
+    width: 140px;
+    height: 35px;
+    border: 1px solid #A6A6A6;
+    border-radius: 2px;
+    background-color: #E5E5E5;
+    font-size: 14px;
+}
+
+/* //로그인폼 */
+
+
+/* 회원가입 ok */
+#user-joinok .form-box{
+    width: 550px;
+    margin: 0px auto;
+    padding: 70px 10px 130px 10px;
+    border: 1px solid #A6A6A6;
+    text-align: center;
+}
+
+#user-joinok .form-box p {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* //회원가입 ok */

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>html5 공부하기</title>
+        <link rel="stylesheet" href="../../assets/css/reset.css">
+        <link rel="stylesheet" href="../../assets/css/mysite.css">
+        <link rel="stylesheet" href="../../assets/css/main.css">
+
+    </head>
+
+    <body>
+        <h1>html5 공부</h1>
+        <h2>form요소-input(checkbox, radio)</h2>        
+
+        <form action="" method="get">
+            <label for="chk-book">독서</label>
+            <input id="chk-book" type="checkbox" name="hobby" value="book" checked="checked">
+
+            <label for="chk-music">음악</label>
+            <input id="chk-music" type="checkbox" name="hobby" value="music">
+            
+            <label for="chk-trip">여행</label>
+            <input id="chk-trip" type="checkbox" name="hobby" value="trip" checked>
+            <br><br>
+            
+    
+            <label for="chk-dog">개</label>
+            <input id="chk-dog" type="checkbox" name="pet" value="dog" >
+            
+            <label for="chk-cat">고양이</label>
+            <input id="chk-cat" type="checkbox" name="pet" value="cat">
+            
+            <label for="chk-bird">새</label>
+            <input id="chk-bird" type="checkbox" name="pet" value="bird">
+
+            <br><br>
+            --------------------------------------<br>
+            
+            <label for="rdo-apple">사과</label>
+            <input id="rdo-apple" type="radio" name="fruit" value="apple" checked="checked">
+
+            <label for="rdo-grape">포도</label>
+            <input id="rdo-grape" type="radio" name="fruit" value="grape" checked="checked">
+
+            <label for="rdo-orange">오렌지</label>
+            <input id="rdo-orange" type="radio" name="fruit" value="orange">
+            <br><br>
+
+            <label for="rdo-m01">1월</label>
+            <input id="rdo-m01" type="radio" name="month" value="m01" checked="checked">
+            
+            <label for="rdo-m02">2월</label>
+            <input id="rdo-m02" type="radio" name="month" value="m02">
+            
+            <label for="rdo-m03">3월</label>
+            <input id="rdo-m03" type="radio" name="month" value="m03">
+
+            <br><br>
+
+            <select name="telecom">
+                <option >통신사를 선택해주세요</option>
+                <option vlaue="sk">SKT</option>
+                <option vlaue="kt">KT</option>
+                <option vlaue="lg" selected="selected">LGU+</option>
+                <option vlaue="etc">알뜰통신</option>
+            </select>
+
+            <br><br><br>
+            <input type="text"><br>
+            <textarea name="content">
+안녕하세요!!!!!!
+            </textarea>
+
+            <label for="txt-id">아이디</label>
+            <input id="txt-id" type="text" placeholder="id" name="id" value="sss">
+            <br>
+
+            <label for="txt-pw">패스워드</label>
+            <input id="txt-pw" type="password" placeholder="pssword" name="pw" value="">
+            <br>
+
+            <button type="submit">전송</button>
+        </form>
+        
+        
+        
+
+    </body>
+</html>

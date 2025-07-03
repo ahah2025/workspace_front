@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+/********************************************************************
+* board 관련 페이지에서만 사용하는 css
+*********************************************************************/
+
+/* 리스트 **********************/
+/* 검색창 */
+#board-list form {
+    padding-bottom: 5px;
+    text-align: right;
+}
+
+#board-list form input[name="kwd"]{
+    width: 150px;
+    height: 30px;
+    padding: 3px;
+}
+
+#board-list form #btn-search{
+    width: 60px;
+    height: 30px;
+}
+
+/* 게시판리스트 */
+#board-list table{
+    text-align: center;
+}
+
+#board-list table>thead>tr{
+    border-top: 2px solid #A6A6A6;
+    border-bottom: 2px solid #A6A6A6;
+    background-color: #DDDDDD;
+}
+
+#board-list table>thead>tr>th{
+    padding: 10px 0px 10px 0px;
+    font-weight: bold;
+}
+
+#board-list table>tbody>tr>td{
+    padding: 12px 0px 12px 0px;
+    border-bottom: 1px solid #A6A6A6;
+}
+
+#board-list table>tbody>tr:hover{
+    background-color: #d3e6ff;
+}
+
+/* 페이징 */
+#board-list .paging{
+    padding: 10px;
+}
+
+#board-list .paging ul{
+    width: 300px;
+    margin: 0 auto;
+}
+
+#board-list .paging ul>li{
+    float: left;
+    width: 25px;
+    text-align: center;
+}
+
+#board-list .paging ul>li.active{
+    font-weight: bold;
+    color: #005cc8;
+}
+
+#board-list .btn-box {
+    text-align: right;
+}
+
+#board-list .btn-box #btn-write{
+    display: inline-block;  /* a요소는 inline이라서 가로 세로가 안됨 */
+    border: 1px solid #A6A6A6;
+    border-radius: 2px;
+    background-color: #E5E5E5;
+    padding: 5px 10px 5px 10px;
+    font-size: 14px;
+}
+
+
+/* 글쓰기폼 **********************/
+#board-writeform  form .form-group {
+    padding: 10px 0px 10px 0px;
+}
+
+/* 폼태그 라벨(제목) */
+#board-writeform  form .form-group .form-text {
+    display: inline-block;  /* 인라인 요소 가로폭을 주려고 */
+    width: 50px;
+    text-align: left;
+}
+
+/* 폼태그(제목) */
+#board-writeform form .form-group #txt-title {
+    width: 765px;
+    height: 30px;
+    padding: 3px;
+}
+
+/* 폼태그(내용) */
+#board-writeform form .form-group #txt-content {
+    width: 819px;
+    height: 400px;
+    padding: 3px;
+}
+
+
+/* 하단 버튼 박스 */
+#board-writeform form .btn-box {
+    text-align: right;
+}
+
+/* 등록 버튼 */
+#board-writeform form .btn-box #btn_add {
+	border: 1px solid #A6A6A6;
+	border-radius: 2px;
+	background-color: #E5E5E5;
+	padding: 5px 20px 5px 20px;
+	margin: 0px 0px 0px 10px;
+	font-size: 14px;
+	cursor: pointer;
+	
+}
+
+/* 취소 버튼 */
+#board-writeform form .btn-box #btn_cancel {
+	display: inline-block;  /* a요소는 inline이라서 가로 세로가 안됨 */
+    border: 1px solid #A6A6A6;
+	border-radius: 2px;
+	background-color: #E5E5E5;
+	padding: 5px 20px 5px 20px;
+	margin: 0px 0px 0px 10px;
+	font-size: 14px;
+	cursor: pointer;
+}
