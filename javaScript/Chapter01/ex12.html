@@ -1,0 +1,40 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+
+    </head>
+
+    <body>
+        <h1>자바스크립트</h1>
+
+        <script>
+            console.log('---------------------------------------------');
+            console.log('변수의 범위');
+
+            /*
+            let str = 'global';    // 전역 변수를 선언
+            
+            function checkScope(){  
+    		    let str = 'local'; // 지역 변수를 선언  ??
+    		    console.log(str);  // 전역 변수가 아닌 지역 변수를 사용
+	        }
+	        checkScope();                  // 출력 결과: "local"
+            console.log(str);              // 출력 결과: "global"
+            */
+
+            //////////////////////////////////////////////////
+            let str='global';
+
+            function checkScope(){  
+    		    str = 'local'; 
+    		    str2 = '로컬'; 
+	        }
+
+            checkScope(); //
+            console.log(str);  //local 
+            console.log(str2); //로컬
+
+        </script>      
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+
+    </head>
+
+    <body>
+        <h1>자바스크립트</h1>
+
+    <script>
+        //이렇게 사용하지 않는다
+        //공부하고 싶으면 gpt 한테 아주 자세히 설명해 달라 하기 (호이스팅)
+        /*
+        #호이스팅
+        #1번쩨 조사 내용
+
+        */
+        console.log('--------------------------------------');
+        console.log('#익명함수의변수와 기명함수의 이름이 같을때');
+
+        //(2)위에서 부터 순서대로 해석
+        var test = function(){
+            console.log('testA함수 입니다.'); //출력됨
+        }
+
+        //(1)선언적 함수가 가장 먼저 해석됨
+        function test(){
+            console.log('testB함수 입니다.'); //출력안됨
+        } 
+
+        //(3)번
+        test();
+
+
+    </script>
+        
+    </body>
+</html>
