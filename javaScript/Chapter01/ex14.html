@@ -1,0 +1,117 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+
+    </head>
+
+    <body>
+        <h1>자바스크립트</h1>
+        <script>
+            console.log('=======================');
+            console.log('#배열');
+
+            let arr00 = new Array();
+            arr00[0] = 1;
+            arr00[1] = 2;
+            arr00[2] = 3;
+            console.log(arr00[1]);
+        
+            console.log('------------------------------');
+            //////////////////////////////////////////////
+
+            let arr01 = [10,20,30,40,50];
+            console.log(arr01[1]);
+         
+            let no = arr01[4]  //배열의 마지막 값 가져오기
+            console.log(no);
+
+            arr01[2] = 300;      //값 변경
+            console.log(arr01[2]);
+
+            arr01[5] = 1000;        //추가
+            console.log(arr01[5]);
+
+            console.log('------------------------------');
+            //전체출력 for문
+            for(let i=0; i<arr01.length; i++){
+                console.log(arr01[i]);
+            }    
+            console.log('------------------------------');
+            //전체출력(개발)
+            console.log(arr01);
+
+            console.log('------------------------------');
+            ////////////////////////////////////////////////////////////////
+            let arr02 = [];  //값 없이 배열만 선언
+            arr02[0] = 1;
+            arr02[1] = 2;
+            arr02[2] = 3;
+
+            for(let i=0; i<arr02.length; i++){
+                console.log(arr02[i]);
+            }
+            console.log('------------------------------');
+            ////////////////////////////////////////////////////////////////
+            //자바스크립트의 변수 number, String, boolean, undifined,function
+            //let aaa = function(){console.log('aaa')};
+
+            let arr03 = [];
+            arr03[0] = 1;
+            arr03[1] = 1.5;
+            arr03[2] = '안녕';
+            arr03[3] = 'HellO'; 
+            arr03[4] = 5<3;
+            arr03[5] = function(){
+                console.log('정우성')        
+            };
+
+            /*
+            arr03[5](); 
+                  5:값  ()실행 
+            */
+            for(let i=0; i<arr03.length; i++){
+                //console.log(typeof arr03[i]);
+
+                if(typeof arr03[i] === 'function'){
+                    arr03[i]();
+                }else {
+                    console.log(arr03[i])
+                }
+            } 
+            console.log('--------------------------------------------');
+            arr03[5]();  //함수의 실행
+            //변수에 함수를 넣을 수 있다
+            //변수이름을 부르고 ()실행 한다 --> 이름부르는거랑 실행을 구분해라
+
+            console.log('--------------------------------------------');
+            
+            let arr04 = [1,2.5,'안녕',['박명수','정우성','유재석']];
+            //          [0] [1] [2]    [3]   
+            console.log(arr04[2]);      //안녕
+            console.log(arr04[3][0]);   //박명수
+            console.log(arr04[3][1]);   //정우성
+            // 93번 라인 3:큰 방번호, 1: 작은 방번호
+            
+            console.log('--------------------------------------------');
+
+            let arr05 = ['이효리'];
+            arr05[1] ='정우성';   //방번호 알아야 쓸 수 있다 
+            arr05.push('양세찬'); //맨끝에 추가(몇번째 방인지 몰라도 됨)
+            arr05.push('주우재'); //맨끝에 추가
+            arr05.push('차은우'); //맨끝에 추가
+            
+            console.log(arr05); // 이효리, 정우성, 양세찬, 주우재, 차은우
+
+            //맨끝 제거
+            arr05.pop();
+            console.log(arr05);  // 이효리, 정우성, 양세찬, 주우재
+
+            //참고 다양한 함수가 있다. 필요하면 찾아보자
+            arr05.splice(2,1); //2번째 방(정우성)에서 1개의 값을 제거하자
+            
+            console.log(arr05); //이효리, 정우성, 주우재
+
+        </script>        
+    </body>
+</html>

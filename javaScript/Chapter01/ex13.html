@@ -1,0 +1,42 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+
+    </head>
+
+    <body>
+        <h1>자바스크립트</h1>
+        <script>
+            console.log('---------------------------------------------');
+            console.log('변수의 범위');
+
+            let x; //*전역변수? 지역변수? 상수?
+
+        	function testFunc(){
+		        let y;      //전역변수? *지역변수? 상수?
+
+		        x = 10;     //*전역변수? 지역변수? 상수?
+	        	y = 20;     //전역변수? *지역변수? 상수? 
+		        z = 30;     //*전역변수? 지역변수? 상수?
+		
+        		if(y == 20) {
+		        	let b = 40;  //전역변수? 지역변수? 상수?
+			        b++;
+	        		console.log("b = " + b); //출력 b = 41
+		        }
+		
+            //이곳에서 변수 b, x, y, z에 접근가능?
+            console.log("b = " + b);   //안됨
+            console.log("x = " + x);   //가능  x = 10
+            console.log("y = " + y);   //가능  y = 20
+            console.log("z = " + z);   //가능  z = 30
+            
+            }
+		
+        	testFunc();
+	        //이곳에서 변수 b, x, y, z에 접근가능	
+
+        </script>      
+    </body>
+</html>

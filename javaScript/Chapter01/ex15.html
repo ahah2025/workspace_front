@@ -1,0 +1,40 @@
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+
+    </head>
+
+    <body>
+        <h1>자바스크립트</h1>
+        <script>
+            console.log('--------------------------------------------');
+            console.log(' #객체');
+
+            //번호 이름 패스워드 본문 등록시간 GuestbookVO
+            let guestbookVO = {
+                no : '1',
+                name : '이아름',
+                password : '123',
+                content : ' 안녕하세요 방명록 내용',
+                showInfo : function (){
+                    console.log('방문자 번호:'+this.no);
+                    console.log('방문자 이름:'+this.name);
+                    console.log(this.no + ", " + this.name + ", " + this.password + "," + this.content)
+                }
+            }
+
+            let no = guestbookVO.no;
+            console.log(no);
+            
+            console.log(guestbookVO.name);
+
+            let password = guestbookVO['password'];
+            console.log(password);
+
+            guestbookVO.showInfo();
+        
+        
+        </script>      
+    </body>
+</html>
