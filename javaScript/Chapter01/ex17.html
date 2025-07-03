@@ -10,8 +10,35 @@
         <script>
             console.log('==================================================');
             console.log(' # 삼각형, 사각형, 원 넓이 과제');
-        
-        
+
+            //삼각형
+            //삼각형의 넓이는 = 23.52
+            function findTriangleArea() {
+                const targetArea = 23.52;
+                const tolerance = 0.01; // 오차 허용 범위
+                let resultHTML = "<ul>";
+
+                for (let base = 1; base <= 100; base += 0.1) {
+                    for (let height = 1; height <= 100; height += 0.1) {
+                    const area = (base * height) / 2;
+                    if (Math.abs(area - targetArea) <= tolerance) {
+                        resultHTML += `<li>밑변: ${base.toFixed(2)}㎝, 높이: ${height.toFixed(2)}㎝ → 넓이: ${area.toFixed(2)}㎠</li>`;
+                    }
+                }
+            }
+
+            resultHTML += "</ul>";
+            document.getElementById("result").innerHTML = resultHTML || "조건에 맞는 조합을 찾지 못했습니다.";
+            }
+
+
+            //사각형
+            //사각형의 넓이는 = 34.23
+           
+           
+            //원
+            //원의 넓이는 = 23.45
+           
         </script>      
     </body>
 </html>
