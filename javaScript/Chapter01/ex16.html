@@ -11,9 +11,50 @@
             console.log('==================================================');
             console.log(' # 자바의 리스트 개념');
 
-            
-        
-        
+            let personList = []; //배열(리스트개념) 생성--> 비어있음
+
+            //VO1
+            let personVO1 ={
+                no : 1,
+                name : '양세찬',
+                hp : '010-1111-1111',
+                company : '02-111-1111'
+            };
+
+
+            //VO2
+            let personVO2 ={
+                no : 2,
+                name : '주우재',
+                hp : '010-2222-2222',
+                company : '02-2222-2222'
+            }
+
+            //VO3
+            let personVO3 ={
+                no : 3,
+                name : '서장훈',
+                hp : '010-3333-3333',
+                company : '02-3333-3333'
+            }
+
+            personList.push(personVO1);
+            personList.push(personVO2);
+            personList.push(personVO3);
+            console.log(personList);
+
+            console.log('==================================================');
+
+            //전체 이름만 출력
+            for(let i=0; i<personList.length; i++){
+                console.log(personList[i].name);
+            }   //양세찬, 주우재, 서장훈
+
+            //전체 출력
+            for(let i=0; i<personList.length; i++){
+                console.log(personList[i].name + "(" + personList[i].hp + ")" );
+            } 
+
         </script>      
     </body>
 </html>
