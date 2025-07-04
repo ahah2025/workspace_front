@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link href="" rel="stylesheet">
+
+	</head>
+
+	<body>
+		
+		<!--아이디-->
+		<ul>
+			<li id="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
+			<li id="second"> 텍스트2 텍스트2 텍스트2 텍 스트2 텍스트2 </li>
+			<li id="third"> 텍스트3 텍스트3 텍스트3 텍 스트3 텍스트3 </li>
+			<li id="fourth"> 텍스트4 텍스트4 텍스트4 텍스트4 텍스트4 </li>
+			<li id="first"> 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 </li>
+		</ul>
+
+	<!-- ----------------------------------- -->	
+	<script>
+	//돔트리 완료 되었을때	
+	//html은 document에서 관리 --> html 초벌구이가 완료 되었을때
+	document.addEventListener('DOMContentLoaded', function(){
+		console.log('돔트리 완료 -- 페인팅 되기전');
+
+		// id 로 찾기/////////////////////////////////////////////
+
+		// id = second 빨강색
+		let seTag = document.getElementById('second');
+		seTag.style.color = '#ff0000';
+
+		// id = third 파란색
+		let thTag = document.getElementById('third');
+		thTag.style.color = '#0000ff';
+		
+		// id = fourth 초록색
+		let foTag = document.getElementById('fourth');
+		foTag.style.color = '#00ff00';
+
+		// id =  first 분홍색 #ff00ff
+		// 동일한 id
+		let fiTag = document.getElementById('first');
+		fiTag.style.color = '#ff00ff';
+
+	});
+
+	//페인팅까지 완료 되었을때
+	//브라우저 전체창(window) 기준으로 모든 준비가 완료되었을때 --> 화면에 그려졌을 때
+	window.addEventListener('load',function(){
+		console.log('페인팅까지완료');
+	});
+
+	</script>
+	<!-- ----------------------------------- -->	
+
+	</body>
+
+
+
+</html>
