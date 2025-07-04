@@ -88,10 +88,26 @@
 		console.log(lilaTags);
 		
 		for(let i=0; i<lilaTags.length; i++){
-			lilaTags[i].style.color = 'green';	
+			lilaTags[i].style.color = '#00ff00';	
 		}
 
-		//li요소와 lable 요소
+		// name="userId" 인 요소를 빨강으로  -- jung 
+		let txtTag = document.querySelector('input[name="userId"]');
+		console.log(txtTag);
+		txtTag.style.color = '#ff0000';
+
+		//마지막 li요소를 빨강
+		/*
+		let liEls = document.querySelectorAll('li');
+		liEls[liEls.length-1].style.color = '#ff0000';
+		*/	
+
+		let liEl = document.querySelector('li:last-child');
+		liEl.style.color = '#ff0000';
+
+
+
+		
 
 	});	
 

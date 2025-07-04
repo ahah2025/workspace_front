@@ -17,11 +17,59 @@
 
 		<p id="p01">문장1</p>
 		<p id="p02">문장2</p>
-	</body>
+<!-- ---------------------------------------------- -->
+<script>
+//DOM트리 완료 되었을     때!!!!!!!!!!!	
+document.addEventListener('DOMContentLoaded',function(){
+	console.log('돔트리 완료');
+	
+	/*<input id="txt-userId" class="form-txt" type="text" 
+	name="userId" value="jung" placeholder="아이디를 입력해주세요"><br>
+	*/
+	//id="txt-userId"  => t-id
+	let tag01 = document.querySelector('#txt-userId');
+	console.log(tag01);
 
-	<script>
+	tag01.id = 't-id'; 		//아이디 수정
 
 
-	</script>
+	tag01.className = 'f-txt';
+	tag01.type = 'password';
+	tag01.value = '정우성';
 
+	tag01.tagName = 'DIV';
+
+	console.log(tag01.id);  //t-id
+	console.log(tag01.className);
+	console.log(tag01.type);
+	console.log(tag01.value);
+	console.log(tag01.tagName);  //tagname은 변경 불가능
+
+	//실습
+	//<a href="https://www.naver.com" target="_blank">네이버</a>
+
+	//새창 --> 본인의 창으로 ???????????????????????????????????????????????
+
+	let tag02 = document.querySelector('a');
+	console.log(tag02);
+	console.log(tag02.id);
+
+	//네이버 --> 구글
+	tag02.innerText = '구글';
+	console.log(tag02.innerText);
+
+	//주소 구글로 변경
+	tag02.href = 'https://www.google.com';
+	console.log(tag02.href);
+
+
+
+});
+
+
+
+
+</script>
+
+</body>
 </html>

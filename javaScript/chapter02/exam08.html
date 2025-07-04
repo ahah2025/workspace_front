@@ -50,9 +50,42 @@
 			</tbody>
 		</table>
 
+<!-- ----------------------------------------------------------------- -->	
+<script>
+window.addEventListener('load',function(){
+	console.log('load 완료');
+     
+	let personList = []; //배열(리스트개념) 
+
+	//VO1
+    let personVO1 ={
+        name : '정우성',
+        hp : '010-1111-1111',
+        company : '02-1111-1111'
+    };
+
+	//VO2
+    let personVO2 ={
+        name : '이효리',
+        hp : '010-2222-2222',
+        company : '02-2222-2222'
+    };
+
+	//VO3
+	let personVO3 ={
+		name : '박명수',
+		hp : '010-3333-3333',
+		company : '02-3333-3333'
+	};
+
+	personList.push(personVO1);
+	personList.push(personVO2);
+	personList.push(personVO3);
+	console.log(personList);
+
+
+});
+</script>
+
 	</body>
-
-	<script>
-	</script>
-
 </html>
