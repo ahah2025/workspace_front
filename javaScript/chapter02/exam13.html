@@ -26,11 +26,13 @@
  <---------------돔이 완료되었을때
  #버튼을 잡아온다    
  버튼을 클릭할 때      
-    - 첫번째 창의 값 가져오기
-    - 두번째 창의 값 가져오기
+    - 첫번째 창의 value값 가져오기
+    - 두번째 창의 value값 가져오기
     - 둘 더하기(계산하기)
     - p요소에 더한값 적용하기
 */
+
+//돔트리가 완료 되었을 때
 document.addEventListener('DOMContentLoaded', function(){
     console.log('돔트리 완료');
 
@@ -40,14 +42,15 @@ document.addEventListener('DOMContentLoaded', function(){
     btnTag.addEventListener('click',function(){
         console.log('버튼클릭');
 
-        //--첫번째 창의 값 가져오기 
+        //--첫번째 창의 value값 가져오기 
         let leftTag = document.querySelector('#left');  
         let leftNo = Number.parseInt(leftTag.value);    //문자열(스트링)을 숫자로 바꿈
         //console.log(typeof leftNo);
 
-        //-- 두번째 창의 값 가져오기
+        //-- 두번째 창의 value값 가져오기
         let rightTag = document.querySelector('#right');
         let rightNo = Number.parseInt(rightTag.value);  //문자열(스트링)을 숫자로 바꿈
+        //console.log(typeof rightNo);
 
         //-- 둘 더하기
         let sum = leftNo + rightNo;
@@ -58,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function(){
         pTag.textContent = sum;
     
         //입력창 비우기
-        leftTag.value = '';
+        leftTag.value = ''; //사실상 비운게 아니라 아무글씨 없는 빈칸을 적용시킨 것
         rightTag.value = '';
     });
 

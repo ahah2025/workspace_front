@@ -62,8 +62,9 @@
 
 <!-- -------------------------------------->
 <script>
+//돔트리가 완료되었을 때	
 document.addEventListener('DOMContentLoaded',function(){
-	console.log('돔트리 완료');
+	console.log('돔트리완료');
 
 	let p11Tag = document.querySelector('#p11');
 	console.log(p11Tag);
@@ -71,11 +72,10 @@ document.addEventListener('DOMContentLoaded',function(){
 	console.log(p11Tag.textContent);
 	//console.log(p11Tag.innerText);		//innerText(X) --> textContent(O) 
 	
-	//#p13 태그에 텍스트를 --> 
-
-	
+	//#p13 태그에 텍스트를 --> "<strong>가나다라마바사아자차카타파하</strong>"
+	//<p id="p13">문장1</p>
+	//<p id="p13"><strong>가나다라마바사아자차카타파하</strong></p>
 	let p13Tag = document.querySelector('#p13');
-	//console.log(p13Tag);
 	p13Tag.textContent = '<strong>가안아 오전 11:32</strong>'; //html글자로 출력
 
 	let p14Tag = document.querySelector('#p14');
