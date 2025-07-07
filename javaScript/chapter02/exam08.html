@@ -52,39 +52,42 @@
 
 <!-- ----------------------------------------------------------------- -->	
 <script>
-window.addEventListener('load',function(){
-	console.log('');
-     
-	let personList = []; //배열(리스트개념) 
+//돔트리가 완성되었을때
+document.addEventListener('DOMContentLoaded',function(){
 
-	//VO1
-    let personVO1 ={
-        name : '정우성',
-        hp : '010-1111-1111',
-        company : '02-1111-1111'
-    };
+	//배열(리스트)
+	let personList = [];
 
-	//VO2
-    let personVO2 ={
-        name : '이효리',
-        hp : '010-2222-2222',
-        company : '02-2222-2222'
-    };
+	let trTags = document.querySelectorAll('tbody>tr');
+	/*
+	console.log(trTags);
+	console.log(trTags[0].children);
+	console.log(trTags[0].children[0].innerText);
+	*/
+	
+	for(let i=0; i<trTags.length; i++){
+		//데이터 추출
+		let name = trTags[i].children[0].innerText
+		let hp = trTags[i].children[1].innerText;
+		let company = trTags[i].children[2].innerText;
+	
 
-	//VO3
-	let personVO3 ={
-		name : '박명수',
-		hp : '010-3333-3333',
-		company : '02-3333-3333'
+	//객체 생성(vo로 묶는다)
+	let personVO = {
+		name:name , 
+		hp:hp , 
+		company:company
 	};
 
-	personList.push(personVO1);
-	personList.push(personVO2);
-	personList.push(personVO3);
+	//객체(vo)를 배열에 추가한다
+	personList.push(personVO);
+	
+	}
+
 	console.log(personList);
-
-
 });
+     
+
 </script>
 
 	</body>

@@ -17,14 +17,35 @@
         <h1 id="display">이름출력영역</h1>
         <button id="btn" type="button">테스트버튼</button>
     </div>
-    
 
+<!--  ----------------------------------->
+<script>
+//돔트리가 완료되었을때
+document.addEventListener('DOMContentLoaded',function(){
+    console.log('돔트리완료');
+
+    //버튼에 내용을 추가해놓는다(작동 X) --> 실
+    let btnTag = document.querySelector('#btn');
+   
+    //버튼이 클릭되었을(때 --> 이벤트)
+    btn.addEventListener('mouseup', function(){
+        console.log('버튼클릭'); 
+
+        //h1요소를 잡아온다
+        let h1Tag = document.querySelector('#display');
+        //--h1을 글자 홍길동으로 적용
+        //글자색을 파란색으로 적용
+        h1Tag.textContent = '홍길동';
+        h1Tag.style.color = '#0000ff';    
+   
+    });    
+
+});
+
+</script>
 
 </body>
 
-<script>
 
-
-</script>
 
 </html>
