@@ -42,13 +42,16 @@ document.addEventListener('DOMContentLoaded', function(){
     btnTag.addEventListener('click',function(){
         console.log('버튼클릭');
 
-        //--첫번째 창의 value값 가져오기 
+        //태그 가져오기
         let leftTag = document.querySelector('#left');  
+        let rightTag = document.querySelector('#right');
+        let pTag = document.querySelector('#display');
+
+        //--첫번째 창의 value값 가져오기 
         let leftNo = Number.parseInt(leftTag.value);    //문자열(스트링)을 숫자로 바꿈
         //console.log(typeof leftNo);
 
         //-- 두번째 창의 value값 가져오기
-        let rightTag = document.querySelector('#right');
         let rightNo = Number.parseInt(rightTag.value);  //문자열(스트링)을 숫자로 바꿈
         //console.log(typeof rightNo);
 
@@ -57,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function(){
         console.log(sum);
 
         //-- p요소에 더한값 적용하기
-        let pTag = document.querySelector('#display');
         pTag.textContent = sum;
     
         //입력창 비우기

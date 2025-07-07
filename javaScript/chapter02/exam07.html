@@ -58,29 +58,37 @@ document.addEventListener('DOMContentLoaded',function(){
 
 	let tag01 = document.querySelector('h1');
 	console.log(tag01);
-
 	//부모찾기
-	console.log(tag01.parentElement); //<body></body>
+	console.log(tag01.parentElement);
 	console.log(tag01.parentElement.parentElement);
 
-	console.log('---------------------------------------------');
+	console.log("-------------------------------------")
 
+	//class="red" 의 부모의 id값을 출력하세요  => content
 	let tag02 = document.querySelector('.red');
-	console.log(tag02);
+	console.log(tag02);	
+	//tag02 부모찾기
 	console.log(tag02.parentElement);	  //<div id="content"> ... </div>	
 	console.log(tag02.parentElement.id);  //content
 	
 	console.log('---------------------------------------------');
 
 	//id="n-3"						76번 라인 : 아이디는 '#'으로 표기
-	let tag03 = document.querySelector('#n-3').parentElement;
+	/*
+	let tag03 = document.querySelector('#n-3');
 	console.log(tag03);
-	
+	console.log(tag03.parentElement);
+	*/
+
+	let tag03 = document.querySelector('#n-3').parentElement; 
+	console.log(tag03);
+
+	console.log("-------------------------------------");
 	//이효리 핸드폰 tr
    	let tag04 = document.querySelector('#n-2');
    	console.log(tag04);
 
-	//#n-2 위치일때  본인의 tr의 id값 출력
+	//#n-2 위치일때  본인의 tr의 id값 출력   n-2
 	let id = tag04.id;
     console.log(id);
 
@@ -100,7 +108,9 @@ document.addEventListener('DOMContentLoaded',function(){
 	console.log(tag04.lastElementChild.innerText);
 	console.log('---------------------------------------------');
 
+	///////////////////////////////////////////////////////////////////
     //#h-2 위치일때  정우성 회사번호   02-1111-1111
+	//--#h-2
 	let tag05 = document.querySelector('#h-2');
     console.log(tag05);
 
@@ -121,7 +131,6 @@ document.addEventListener('DOMContentLoaded',function(){
     let result = tag05.parentElement.nextElementSibling.firstElementChild.innerText;
 	console.log(result);
 	
-
 });
 
 </script>	

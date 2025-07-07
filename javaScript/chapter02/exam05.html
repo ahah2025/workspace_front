@@ -35,21 +35,26 @@
 
 		<p id="p01">자바<strong>스크립트</strong></p>
 		<p id="p02">자바<strong>스크립트</strong></p>
+
+<!-- ---------------------------------------------------------------------------->		
 	<script>
+	//태그 이름 알아내기	
 	//#nav 의 태그명이 뭔지 알고 싶다
 	let tag01 = document.querySelector('#nav');	
 	console.log(tag01);
 	console.log(tag01.tagName); //#nav의 태그네임 --> 대문자(DIV)
 
 	//target="_blank" 의 태그네임	
-	let targ = document.querySelector('a[target="_blank"]'); 	
-	console.log(targ);
-	console.log(targ.tagName); 
+	let tag2 = document.querySelector('a[target="_blank"]'); 	
+	console.log(tag2);
+	console.log(tag2.tagName); 
 	
-	let tag03s = document.querySelector('div');	
-	console.log(tag03s);			// <div id="nav"> ... </div>
-	console.log(tag03s.tagName);	//DIV
-	console.log(tag03s.id);		//nav
+	//아이디 알아내기
+	//--div요소의 id 출력
+	let tag03 = document.querySelector('div');	
+	console.log(tag03);			// <div id="nav"> ... </div>
+	console.log(tag03.tagName);	//DIV
+	console.log(tag03.id);		//nav
 
 	//li태그가져와서 각각의 id 출력하기   
 	let tag04s = document.querySelectorAll('#nav');
@@ -61,7 +66,7 @@
 
 	//클래스명 알아내기
 	//라벨을 가져와서 각각의 클래스명을 출력하세요
-	let tag05s = document.getElementsByClassName('label');
+	let tag05s = document.querySelectorAll('label');
 	console.log(tag05s);
 	for(let i=0; tag05s.length; i++){
 		console.log(tag05s[i].className);
@@ -74,12 +79,12 @@
 	console.log('--------------------------'); 
 
 	//기타속성 알아내기
-	//<a href="https://www.naver.com" target="_blank">네이버</a> 
+	//<input id="txt-userId" class="form-txt" type="text" name="userId" value="jung" placeholder="아이디를 입력해주세요">
 	let tag07 = document.querySelector('#txt-userId');
 	console.log(tag07);
 
 	console.log(tag07.id);		  //id
-	console.log(tag07.className); //classNams	
+	console.log(tag07.className); //className	
 	console.log(tag07.tagName);	  //tagName -> 대문자
 
 	console.log(tag07.type);	  //type
@@ -102,13 +107,23 @@
 	console.log(tag08.innerText);	//네이버
 
 	//innerHTML VS innerText
-	//<li id="gallery" class="active"><span>갤</span>러리</li>
+	/*
+	<li id="gallery" class="active">
+	 		   <span>갤</span>러리
+	</li>
+	*/
 	let tag09 = document.querySelector('#gallery');			
 	console.log(tag09);
 	console.log(tag09.innerHTML);  //요소(태크)살려서 가져온다
 	console.log(tag09.innerText);  //오직 텍스트만 가져온다
 	
 	//innerHTML VS innerText
+	/*
+	<h1>
+		자바<strong>스크립트</strong>
+	</h1>
+	*/
+
 	let tag10 = document.querySelector('h1');
 	console.log(tag10);
 	console.log(tag09.innerHTML);  //요소(태크)살려서 가져온다
@@ -119,12 +134,7 @@
 	console.log(tag11.innerHTML);  //요소(태크)살려서 가져온다
 	console.log(tag11.innerText);  //오직 텍스트만 가져온다
 
-
-
-	
 	</script>
 	</body>
-
-
 
 </html>
