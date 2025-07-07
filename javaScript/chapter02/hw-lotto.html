@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function(){
     function generateRandomNumbers(count, min, max) {
         let result = new Set();
         while (result.size < count) {
-            const num = Math.floor(Math.random() * (max - min + 1)) + min;
+            let num = Math.floor(Math.random() * (max - min + 1)) + min;
             result.add(num);
         }
         return Array.from(result);

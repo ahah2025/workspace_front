@@ -39,14 +39,85 @@
 		<button id="btnEqual" type="button">=</button>
 		<button id="btnMinus" type="button">-</button>
 		<br>
-	</div>
-	
-	
+	</div>	
 </div>
 
 <script>
+document.addEventListener('DOMContentLoaded', function(){
+    console.log('DOM 로딩 완료');
+
+	//버튼 가져오기
+	let btnEqual = document.querySelector('#btnEqual');
+    console.log(btnEqual);
+
+    //버튼에 이벤트 등록
+    //버튼을 클릭할 (때)
+    btnEqual.addEventListener('click',function(){
+        console.log('버튼클릭');
+		
+		//배열(리스트)
+		let adderList = [];
+
+        //테이블 배열로 가져오기
+        let btnAreaTags = document.querySelectorAll('#display>btnArea');
+
+		//반복구간 
+        for(let i=0;i<tableTags.length;i++){
+			//각각의 버튼에서 값을 가져온다
+			let btn0 = btnAreaTags[i].children[0].children[0].children[0].textContent;
+			let btn1 = btnAreaTags[i].children[0].children[0].children[1].textContent;
+			let btn2 = btnAreaTags[i].children[0].children[0].children[2].textContent;
+			let btn3 = btnAreaTags[i].children[0].children[0].children[3].textContent;
+			let btn4 = btnAreaTags[i].children[0].children[0].children[4].textContent;
+			let btn5 = btnAreaTags[i].children[0].children[0].children[5].textContent;
+			let btn6 = btnAreaTags[i].children[0].children[0].children[6].textContent;
+			let btn7 = btnAreaTags[i].children[0].children[0].children[7].textContent;
+			let btn8 = btnAreaTags[i].children[0].children[0].children[8].textContent;
+			let btn9 = btnAreaTags[i].children[0].children[0].children[9].textContent;
+		
+			let btnDiv = btnAreaTags[i].children[0].children[0].children[10].textContent;
+			let btnMulti = btnAreaTags[i].children[0].children[0].children[11].textContent;
+			let btnPlus = btnAreaTags[i].children[0].children[0].children[12].textContent;
+			let btnClear = btnAreaTags[i].children[0].children[0].children[13].textContent;
+			let btnEqual = btnAreaTags[i].children[0].children[0].children[14].textContent;
+			let btnMinus = btnAreaTags[i].children[0].children[0].children[15].textContent;
+
+			//VO로 묶는다
+			calVO = {
+				btn0:btn0,
+				btn1:btn1,
+				btn2:btn2,
+				btn3:btn3,
+				btn4:btn4,
+				btn5:btn5,
+				btn6:btn6,
+				btn7:btn7,
+				btn8:btn8,
+				btn9:btn9,
+				btnDiv:btnDiv, 
+				btnMulti:btnMulti,
+				btnPlus:btnPlus,
+				btnClear:btnClear,
+				btnEqual:btnEqual,
+				btnMinus:btnMinus
+			};
+
+			//배열에 VO를 추가한다
+			adderList.push(calVO);
+		}	
+	});  //버튼 클릭할 (때) End
+
+	//확인용 출력
+	console.log(adderList);
+
+	//전체 출력
+	
+	for(let i=0; i<adderList.length; i++){
+
+	}
 	
 
+});
 </script>
 </body>
 
