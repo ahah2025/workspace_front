@@ -57,12 +57,64 @@
 	</div>
 
 	<br>
-
-</body>
-
+<!-- ------------------------------------->    
 <script>
+//돔트리가 완성 되었을 때 --> 버튼의 클릭 이벤트를 등록하자    
+document.addEventListener('DOMContentLoaded', function(){
+    console.log('돔트리 완료');
+
+    //버튼 가져오기
+    let btn = document.querySelector('#btnGetDate');
+    console.log(btn);
+    
+    //버튼에 이벤트 등록
+    //버튼을 클릭할 (때)
+    btn.addEventListener('click',function(){
+        console.log('버튼클릭');
+
+        //배열(리스트)
+	    let guestbookList = [];
+
+        //테이블 배열로 가져오기
+        let tableTags = document.querySelectorAll('#dataArea>table');
+
+        //반복구간 - 테이블 갯수 만큼 반복한다
+        for(let i=0;i<tableTags.length;i++){
+            //console.log();
+            //각각의 테이블에서 값을 가져온다
+            let no = tableTags[i].children[0].children[0].children[0].textContent;
+            let name = tableTags[i].children[0].children[0].children[1].textContent; 
+            let regDate = tableTags[i].children[0].children[0].children[2].textContent; 
+            let content = tableTags[i].children[0].children[1].children[0].textContent; 
+
+            //VO로 묶는다
+            guestbookVO = {
+                no:no,
+                name:name,
+                regDate:regDate,
+                content:content
+            };
+            
+            //배열에 vo를 추가한다
+            guestbookList.push(guestbookVO);
+        }
+        
+    });
+    
+    //확인용 출력
+   // console.log(guestbookList);
+
+    //전체 출력
+    for(let i=0; i<guestbookList.length; i++){
+        let no = guestbookList[i].no;
+        let name = guestbookList[i].name;
+        let regDate = guestbookList[i].regDate
+        console.log(no+'. '+ name +'('+ regDate + ')' )
+    }    
 
 
+});
 </script>
+</body>
 
 </html>

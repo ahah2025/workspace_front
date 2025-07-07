@@ -15,11 +15,19 @@
     <div>
 		<table border="1" width="540px">
 			<tr>
-				<td>이름</td><td><input type="text" name="name"></td>
-				<td>비밀번호</td><td><input type="password" name="pw"></td>
+				<td>이름</td>
+				<td>
+					<input type="text" name="name" value="">
+				</td>
+				<td>비밀번호</td>
+				<td>
+					<input type="password" name="pw" value="">
+				</td>
 			</tr>
 			<tr>
-				<td colspan="4"><textarea cols="72" rows="5" name="content"></textarea></td>
+				<td colspan="4">
+					<textarea cols="72" rows="5" name="content"></textarea>
+				</td>
 			</tr>
 			<tr>
 				<td colspan="4"><button id="btnWrite" type="button">등록</button></td>
@@ -27,20 +35,48 @@
 		</table>
 	</div>
 	<br>
-
-</body>
-
+<!-- ------------------------------------------------------------------->	
 <script>
+//돔트리가 완성되었을때	
+document.addEventListener('DOMContentLoaded', function(){
+    console.log('돔트리 완료');
 
+    //버튼 가져오기
+    btnTag = document.querySelector('#btnWrite');
+    console.log(btnTag);	
 
+    //버튼에 이벤트 등록
+    btnTag.addEventListener('click',function(){
+        console.log('등록버튼클릭');
 
+	//태그 가져오기
+	let nameTag = document.querySelector('input[name="name"]');  
+	let pwTag = document.querySelector('input[name="pw"]');	
+	let contentTag = document.querySelector('textarea[name="content"]')
 
+	let name = nameTag.value;
+	let pw = pwTag.value;
+	let content = contentTag.value;
 
+	/*
+	console.log(name);
+	console.log(pw);
+	console.log(content);
+	*/
 
-
-
-
+	//guestbookVO 묶기
+    let guestbookVO = {
+        name:name,
+        pw:pw,
+        content:content
+	};
+	//guestbookVO 묶기 End
+	console.log(guestbookVO);
+	
+	//console.log(guestbookVO.name + '(' + guestbookVO.content +')');
+	});
+});
 
 </script>
-
+</body>
 </html>
