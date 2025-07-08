@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 
 <title>Insert title here</title>
+<!--css-->
+
+<!--js-->
+<script src="../assets/js/jquery-3.7.1.js"></script>
+
 </head>
 <body>
 	
@@ -20,6 +25,40 @@
 	<p> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </p>
 	<p> 텍스트3 텍스트3 텍스트3 텍스트3 텍스트3 </p>
 	<p> 텍스트4 텍스트4 텍스트4 텍스트4 텍스트4 </p>
+
+<script>
+/*	
+//돔트리완료  js	
+document.addEventListener('DOMContentLoaded',function(){
+	console.log('돔트리 완성');
+
+	let liTags = document.querySelectorAll('li');
+	console.log(liTags);
+	for(let i=0; i<liTags.length; i++){
+		liTags[i].style.color = '#ff0000';
+	}
+});
+*/
+
+//jquery
+$(document).ready(function(){
+	console.log('돔트리 완료jquery');
+
+	//li요소를 빨간색
+	let liTags = $('li');
+	liTags.css('color','#ff0000');
+	
+	/*
+	//p요소를 파란색으로
+	let pTags = $('p');
+	pTags.css('color','blue');
+	*/
+
+	$('p').css('color','yellowgreen');
+});
+
+
+</script>
 
 </body>
 

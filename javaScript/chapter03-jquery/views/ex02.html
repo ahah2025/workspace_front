@@ -5,6 +5,10 @@
 
 
 <title>Insert title here</title>
+
+<!--js-->
+<script src="../assets/js/jquery-3.7.1.js"></script>
+
 </head>
 <body>
 	
@@ -12,11 +16,33 @@
 	<ul>
 		<li id="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
 		<li id="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
-		<li id="third"> 텍스트3 텍스트3 텍스트3 텍스트3 텍스트3 </li>
+		<li id="third"> third 텍스트3 텍스트3 텍스트3 텍스트3 텍스트3 </li>
 		<li id="fourth"> 텍스트4 텍스트4 텍스트4 텍스트4 텍스트4 </li>
 		<li id="first"> 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 </li>
 	</ul>
 
+<!--------------------------------------->	
+<script>
+//jquery
+//돔트리 완료
+$(document).ready(function(){
+	console.log('돔트리완료');
+
+	let seTag = $('#second');
+	console.log(seTag);
+	
+	$('#second').css('color','yellow');
+
+	let thTag = $('#third');
+	$('#third').css('color','red');
+	console.log(thTag);
+
+	let firTag = $('#first'); 	//맨위에 하나만 적용가능
+	console.log(firTag);
+	firTag.css('color','#00ff00');
+
+});
+</script>	
 
 </body>
 	
