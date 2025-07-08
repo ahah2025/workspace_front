@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트</title>
+	<style>
+        div{
+            width: 400px;
+            border: 1px solid #000000;
+        }
+
+        p{
+            border: 1px solid #000000;
+            background-color: #ff00ff;
+        }
+    </style>	
+
+	</head>
+
+	<body>
+
+		<div>
+			<!-- (before-begin) -->
+			
+			<p id="p01"><!-----------------begin---------->
+			
+				<!-- (after-begin) -->
+				마바사아자차카타파하
+				<!-- (before-end) -->
+			
+			</p><!-------------------------end------------->
+			
+			<!-- (after-end) -->
+		</div>		
+		
+
+<!-- ----------------------------------- -->	
+<script>
+//돔트리가 완료되었을때
+document.addEventListener('DOMContentLoaded', function(){
+   	console.log('돔트리');
+
+    let p01Tag = document.querySelector('#p01');
+   	console.log(p01Tag);
+
+    //컨텐츠영역의 전체 내용이 변경됨
+   	//p01Tag.innerHTML = '가나다라';   
+
+	//컨텐츠영역의 앞에 내용을 추가!!! 하고 싶을때
+	p01Tag.insertAdjacentHTML('afterbegin', 'afterbegin');
+
+	//컨텐츠영역의 뒤에 내용을 추가!!! 하고 싶을때
+	p01Tag.insertAdjacentHTML('beforeend', 'beforeend')
+
+	//p요소 전에 내용을 추가
+	p01Tag.insertAdjacentHTML('beforebegin', '<strong>beforebegin</strong>');
+
+	//p요소 후에 내용을 추가
+	p01Tag.insertAdjacentHTML('afterend', 'afterend');
+
+});
+
+</script>
+	
+</body>
+
+</html>

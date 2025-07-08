@@ -42,79 +42,139 @@
 	</div>	
 </div>
 
+<!-- -------------------------------------------->
 <script>
 document.addEventListener('DOMContentLoaded', function(){
-    console.log('DOM 로딩 완료');
 
-	//버튼 가져오기
-	let btnEqual = document.querySelector('#btnEqual');
-    console.log(btnEqual);
+	//html(DOM)의 자바스크립트 객체화
+	let display = document.querySelector("#display");
 
-    //버튼에 이벤트 등록
-    //버튼을 클릭할 (때)
-    btnEqual.addEventListener('click',function(){
-        console.log('버튼클릭');
-		
-		//배열(리스트)
-		let adderList = [];
+	let btn0 = document.querySelector("#btn0");
+	let btn1 = document.querySelector("#btn1"); 
+	let btn2 = document.querySelector("#btn2");
+	let btn3 = document.querySelector("#btn3");
+	let btn4 = document.querySelector("#btn4");		
+	let btn5 = document.querySelector("#btn5");
+	let btn6 = document.querySelector("#btn6");
+	let btn7 = document.querySelector("#btn7");
+	let btn8 = document.querySelector("#btn8");
+	let btn9 = document.querySelector("#btn9");
 
-        //테이블 배열로 가져오기
-        let btnAreaTags = document.querySelectorAll('#display>btnArea');
+	let btnDiv = document.querySelector("#btnDiv");
+	let btnMulti = document.querySelector("#btnMulti");
+	let btnPlus = document.querySelector("#btnPlus");
+	let btnMinus = document.querySelector("#btnMinus");
 
-		//반복구간 
-        for(let i=0;i<tableTags.length;i++){
-			//각각의 버튼에서 값을 가져온다
-			let btn0 = btnAreaTags[i].children[0].children[0].children[0].textContent;
-			let btn1 = btnAreaTags[i].children[0].children[0].children[1].textContent;
-			let btn2 = btnAreaTags[i].children[0].children[0].children[2].textContent;
-			let btn3 = btnAreaTags[i].children[0].children[0].children[3].textContent;
-			let btn4 = btnAreaTags[i].children[0].children[0].children[4].textContent;
-			let btn5 = btnAreaTags[i].children[0].children[0].children[5].textContent;
-			let btn6 = btnAreaTags[i].children[0].children[0].children[6].textContent;
-			let btn7 = btnAreaTags[i].children[0].children[0].children[7].textContent;
-			let btn8 = btnAreaTags[i].children[0].children[0].children[8].textContent;
-			let btn9 = btnAreaTags[i].children[0].children[0].children[9].textContent;
-		
-			let btnDiv = btnAreaTags[i].children[0].children[0].children[10].textContent;
-			let btnMulti = btnAreaTags[i].children[0].children[0].children[11].textContent;
-			let btnPlus = btnAreaTags[i].children[0].children[0].children[12].textContent;
-			let btnClear = btnAreaTags[i].children[0].children[0].children[13].textContent;
-			let btnEqual = btnAreaTags[i].children[0].children[0].children[14].textContent;
-			let btnMinus = btnAreaTags[i].children[0].children[0].children[15].textContent;
-
-			//VO로 묶는다
-			calVO = {
-				btn0:btn0,
-				btn1:btn1,
-				btn2:btn2,
-				btn3:btn3,
-				btn4:btn4,
-				btn5:btn5,
-				btn6:btn6,
-				btn7:btn7,
-				btn8:btn8,
-				btn9:btn9,
-				btnDiv:btnDiv, 
-				btnMulti:btnMulti,
-				btnPlus:btnPlus,
-				btnClear:btnClear,
-				btnEqual:btnEqual,
-				btnMinus:btnMinus
-			};
-
-			//배열에 VO를 추가한다
-			adderList.push(calVO);
-		}	
-	});  //버튼 클릭할 (때) End
-
-	//확인용 출력
-	console.log(adderList);
-
-	//전체 출력
+	let btnClear = document.querySelector("#btnClear");
+	let btnEqual = document.querySelector("#btnEqual");
 	
-	for(let i=0; i<adderList.length; i++){
 
-	}
+	//출력을 위한 문자열 변수 
+	let str = '';   
+
+	//리스너(이벤트) 등록
+	btn9.addEventListener("click", function(){
+		str += 9; 
+		display.value = str
+	});
+
+	btn8.addEventListener("click", function(){
+		str += 8; 
+		display.value = str;
+	});
+
+	btn7.addEventListener("click", function(){
+		str += 7; 
+		display.value = str;
+	});
+
+
+	btn6.addEventListener("click", function(){
+		str += 6; 
+		display.value = str;
+	});
+
+	btn5.addEventListener("click", function(){
+		str += 5; 
+		display.value = str;
+	});
+
+	btn4.addEventListener("click", function(){
+		str += 4; 
+		display.value = str;
+	});
+
+	btn3.addEventListener("click", function(){
+		str += 3; 
+		display.value = str;
+	});	
+
+	btn2.addEventListener("click", function(){
+		str += 2; 
+		display.value = str;
+	});
+
+	btn1.addEventListener("click", function(){
+		str += 1; 
+		display.value = str;
+	});
+
+	btn0.addEventListener("click", function(){
+		str += 0; 
+		display.value = str;
+	});
+
+	btnDiv.addEventListener("click", function(){
+		str += "/"; 
+		display.value = str;
+	});
+
+
+	btnMulti.addEventListener("click", function(){
+		str += "*"; 
+		display.value = str;
+	});
+	
+	btnPlus.addEventListener("click", function(){
+		str += "+"; 
+		display.value = str;
+	});
+
+	btnMinus.addEventListener("click", function(){
+		str += "-"; 
+		display.value = str;
+	});
+
+	
+	btnClear.addEventListener("click", function(){
+		str = ""; 
+		display.value = str;
+	});
+
+	btnEqual.addEventListener("click", function(){
+		if(str.includes("/")){ //문자열에 "/"를 포함하고 있으면 나누기 계산
+			var data = str.split("/")
+			str=parseInt(data[0])/parseInt(data[1]);
+			
+		}else if(str.includes("*")){ //문자열에 "*"를 포함하고 있으면 곱하기 계산
+			var data = str.split("*")
+			str=parseInt(data[0])*parseInt(data[1]);
+			
+		}else if(str.includes("+")){ //문자열에 "+"를 포함하고 있으면 플러스 계산
+			var data = str.split("+")
+			str=parseInt(data[0])+parseInt(data[1]);
+
+		}else if(str.includes("-")){ //문자열에 "-"를 포함하고 있으면 마이너스 계산
+			var data = str.split("-")
+			str=parseInt(data[0])-parseInt(data[1]);
+			
+		}
+		
+		display.value = str;  //계산한 결과를 화면에 출력
+		//str="";               //값을 초기화(다음계산할을 위해 값 초기화)	
+			
+	});  
+
 	
 
 });

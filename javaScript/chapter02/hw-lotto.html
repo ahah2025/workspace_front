@@ -46,32 +46,39 @@
 document.addEventListener('DOMContentLoaded', function(){
     console.log('DOM 로딩 완료');
 
-    let btn = document.getElementById('btnMakeNo');
-    let tdList = document.querySelectorAll('#numberRow td');
+    //등록버튼 가져오기
+    let btnMakeNo = document.getElementById('btnMakeNo');
+    
+    //등록버튼에 이벤트 등록
+    btnMakeNo.addEventListener('click',function(){
+        console.log('클릭');
 
-    //등록 버튼 클릭 이벤트
-    btn.addEventListener('click',function(){
-        console.log('등록 버튼 클릭');
+        //로또번호 배열
+        let lottoArr = [];
 
-        // 중복 없는 1~45 사이의 랜덤 숫자 6개 생성
-        let numbers = generateRandomNumbers(6, 1, 45);
-        console.log('생성된 번호:', numbers);
-
-        // td에 숫자 출력
-        tdList.forEach((td, index) => {
-            td.textContent = numbers[index];
-        });
-    });
-
-    // 중복 없는 랜덤 숫자 배열 생성 함수
-    function generateRandomNumbers(count, min, max) {
-        let result = new Set();
-        while (result.size < count) {
-            let num = Math.floor(Math.random() * (max - min + 1)) + min;
-            result.add(num);
+        //번호를 생성해서 배열에 추가
+        while(true){
+            //배열에 숫자가 6개를 넘으면 탈출
+            if(lottoArr.length >= 6){
+                break;
+            }
+            
+            //배열에 방금 뽑은 숫자가 없으면 배열에 추가
+            let no = Math.floor(Math.random()*45)+1;
+            console.log(no);
+            if(!lottoArr.includes(no)){  //includes() 메소드 찾아보기
+                lottoArr.push(no);
+            }
         }
-        return Array.from(result);
-    }
+        //숫자를 출력할 곳 td요소 6개를 가져온다
+        let tdTags = document.querySelectorAll('tbody>tr:first-child>td');
+        
+        //화면에 출력
+        for(let i=0; i<tdTags.length; i++){
+            tdTags[i].textContent = lottoArr[i];
+        }
+    });
+        
 
 });
 
