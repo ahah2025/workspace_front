@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html lang="ko">
-	<head>
+<head>
 	<meta charset="UTF-8">
 	<title>자바스크립트</title>
 	<style>
         ul{
-            width: 400px;
-            border: 1px solid #000000;
+            background-color: #ff00ff;
+            padding: 10px;
+            width: 300px;
         }
 
         ul>li{
             border: 1px solid #000000;
-            background-color: #ff00ff;
+            background-color: hsl(0, 0%, 100%);
+           
         }
     </style>
-	</head>
+</head>
 
-	<body>
-		<ul>
-			<li id="p01">첫번째아이템입니다.</li>
-			<li id="p02">두번째아이템입니다.</li>
-			<li>세번째아이템입니다.</li>
-			<li>네번째아이템입니다.</li>
-			<li>다섯번째아이템입니다.</li>		
-		</ul>	
-		<button id="btn" type="button" >뒤에추가</button>
+<body>
+	<ul>
+		<li>첫번째아이템입니다.</li>
+		<li>두번째아이템입니다.</li>
+		<li>세번째아이템입니다.</li>
+		<li>네번째아이템입니다.</li>
+		<li>다섯번째아이템입니다.</li>		
+	</ul>	
+	<button id="btn" type="button" >뒤에추가</button>
 <!-- ----------------------------------------------------->
 <script>
-//돔트리가 완료 되었을때 
+//돔트리가 완성 되었을때 
 document.addEventListener('DOMContentLoaded',function(){
-	console.log('돔트리완료');
+	console.log('돔트리완성');
 
-	//버튼 이벤트 등록(뒤에추가)
+	//뒤에추가 버튼 클릭할때
 	let btn = document.querySelector('#btn');
 	console.log(btn);
 	
 	btn.addEventListener('click',function(){
 		console.log('버튼클릭');
 
-		let ulTag1 = document.querySelector('ul');
-		console.log(ulTag1);
-		ulTag1.insertAdjacentHTML('beforeend','<li>뒤에 추가된 아이템입니다.</li>');
-	});
+        let ulTag = document.querySelector('ul');
+        console.log(ulTag);
+        ulTag.insertAdjacentHTML('beforeend', '<li>뒤에 추가된 아이템입니다.</li>');
+
+    });
 
 	
 	//li태그 이벤트 등록(클릭한 li태그 삭제)    -->  추가된 li는 클릭이벤트 등록이 안된다!!!!!!!!!
@@ -54,17 +57,18 @@ document.addEventListener('DOMContentLoaded',function(){
 			console.log(i+'클릭');
 			this.remove();
 
-			//상황파악
-			console.log(this);
-			console.log(this.target);
+			//(지금상황에서는 같다-->두개는 다른 경우도 있다)
+			console.log(this);			//이벤트리스너가 있는 태그(요소)
+			console.log(this.target);   //사용자 실제로 클릭한 태그(요소)
 
 
 		});
 	}
 	*/
 
+	//ul태그를 클릭했을때 --> li태그 위임
+    //---> 추가된 li는 클릭이벤트 등록이 안된다!!!!!!!
 	//부모(ul요소)에 클릭 이벤트(할일)를 등록해준다
-	// --> 할일은 자식에게 전달해라
 	//이벤트 발생하면 할일은 자식에게 전달!!!!! 해라!!!!!!!!!!!
 	let ultag = document.querySelector('ul'); 
 	console.log(ultag);

@@ -5,13 +5,15 @@
 	<title>자바스크립트</title>
 	<style>
         ul{
-            width: 400px;
-            border: 1px solid #000000;
+            background-color: #ff00ff;
+            padding: 10px;
+            width: 300px;
         }
 
-        li{
+        ul>li{
             border: 1px solid #000000;
-            background-color: #ff00ff;
+            background-color: hsl(0, 0%, 100%);
+           
         }
     </style>
 	</head>
@@ -34,38 +36,30 @@
 //돔트리가 완료 되었을때 
 document.addEventListener('DOMContentLoaded',function(){
 	console.log('돔트리완료');
-	/*
-	let p01tag = document.querySelectorAll('#p01');
-	console.log(p01tag);	//맨위에 li요소
-	*/
-	
-	/*
-	tag.addEventListener('click',function(){
-		console.log('클릭');
-	});
-	*/
+    /* 
+    //1개씩 이벤트를 등록하면 10개 해야된다.   리스트가 추가되면 이벤트등록이 어렵다
+    let p01 = document.querySelector('#p01');
+    console.log(p01);  //맨위에 li요소
+    p01.addEventListener('click', function(){
+        console.log('클릭');
+    });
+    */
+
 	let litags = document.querySelectorAll('li');
 	console.log(litags);
 	for(let i=0; i<litags.length; i++){
-		litags[i].addEventListener('click',function(){
+		litags[i].addEventListener('click',function(event){
 			console.log(i+'li태그 삭제');
-			//console.log(this);
-			//this.remove(); //본인을 지워라
+			this.remove();       //삭제
+            //this.innerHTML = "";   //비움
 
-			//
+			//(지금상황에서는 같다-->두개는 다른 경우도 있다)
 			console.log(this);			//이벤트리스너가 있는 태그(요소)
 			console.log(event.target);  //사용자 실제로 클릭한 태그(요소)
-
-
-
 
 		});
 
 	}
-
-
-
-
 
 });
 

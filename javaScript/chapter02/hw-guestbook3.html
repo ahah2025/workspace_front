@@ -31,7 +31,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td colspan="4"><button id="btnWrite" type="button">등록</button></td>
+					<td colspan="4"><button id="btnWrite" type="submit">등록</button></td>
 				</tr>
 			</table>
 		</form>
@@ -45,23 +45,19 @@ document.addEventListener('DOMContentLoaded',function(){
 
 	// 폼은 submit 버튼에 클릭이벤트가 아니다
 	//폼은 이벤트를 폼에 등록한다 이벤트명이 submit(O)      click(X)
-	let guestbookForm = document.querySelector('#guestBookForm');
+	let guestbookForm = document.querySelector('#guestbookForm');
 	console.log(guestBookForm);
 
-	guestBookForm.addEventListener('click',function(event){
+	guestBookForm.addEventListener('submit',function(event){
 		consloe.log('폼전송클릭');
 
 		//이름이 비어 있으면
 		let nameTag = document.querySelector('input[name="name"]');
-		console.log(nameTag);
-		console.log(nameTag.value);
-		console.log(nameTag.value.trim());
-		
 		let name = nameTag.value.trim();
-
+		
 		if(name == ''){
-			window.alert('이름을 확인해 주세요');
-			event.preventDefault(); 
+			window.alert('이름을 확인해 주세요')
+			event.preventDefault();  //원래(전송)하던거 멈추기
 
 			return false;
 		}
@@ -73,8 +69,8 @@ document.addEventListener('DOMContentLoaded',function(){
 
 		if(pw == ''){
 			//전송을 멈춰라
-			window.alert('비밀번호를 입력하세요');
-			event.preventDefault();
+			window.alert('비밀번호를 확인해주세요');
+			event.preventDefault(); //원래(전송)하던거 멈추기
 
 			return false;
 		}	
