@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<title>자바스크립트</title>
+	<style>
+        ul{
+            width: 400px;
+            border: 1px solid #000000;
+        }
+
+        ul>li{
+            border: 1px solid #000000;
+            background-color: #ff00ff;
+        }
+    </style>
+	</head>
+
+	<body>
+		<ul>
+			<li id="p01">첫번째아이템입니다.</li>
+			<li id="p02">두번째아이템입니다.</li>
+			<li>세번째아이템입니다.</li>
+			<li>네번째아이템입니다.</li>
+			<li>다섯번째아이템입니다.</li>		
+		</ul>	
+		<button id="btn" type="button" >뒤에추가</button>
+<!-- ----------------------------------------------------->
+<script>
+//돔트리가 완료 되었을때 
+document.addEventListener('DOMContentLoaded',function(){
+	console.log('돔트리완료');
+
+	//버튼 이벤트 등록(뒤에추가)
+	let btn = document.querySelector('#btn');
+	console.log(btn);
+	
+	btn.addEventListener('click',function(){
+		console.log('버튼클릭');
+
+		let ulTag1 = document.querySelector('ul');
+		console.log(ulTag1);
+		ulTag1.insertAdjacentHTML('beforeend','<li>뒤에 추가된 아이템입니다.</li>');
+	});
+
+	
+	//li태그 이벤트 등록(클릭한 li태그 삭제)    -->  추가된 li는 클릭이벤트 등록이 안된다!!!!!!!!!
+	/*
+	let liTags = document.querySelectorAll('li');
+	console.log(liTags);
+	for(let i=0; i<liTags.length; i++){
+		//반복문 돌면서 각각의 li태그에 이벤트를 등록해준다
+		liTags[i].addEventListener('click',function(event){
+			console.log(i+'클릭');
+			this.remove();
+
+			//상황파악
+			console.log(this);
+			console.log(this.target);
+
+
+		});
+	}
+	*/
+
+	//부모(ul요소)에 클릭 이벤트(할일)를 등록해준다
+	// --> 할일은 자식에게 전달해라
+	//이벤트 발생하면 할일은 자식에게 전달!!!!! 해라!!!!!!!!!!!
+	let ultag = document.querySelector('ul'); 
+	console.log(ultag);
+	ultag.addEventListener('click',function(event){
+		console.log('ul 클릭');
+		
+		//두개가 다른 경우
+		console.log(this); //이벤트리스너가 있는 태그(요소)
+		console.log(event.target); //사용자 실제로 클릭한 태그(요소)
+		console.log(event.target.tagName); //실제로 클릭한 태그네임(대문자로 출력됨!!!!!!!!!)
+
+		if(event.target.tagName == 'LI'){
+			console.log('li태그 클릭했음');
+			event.target.remove();
+		}
+
+
+	});
+
+});
+
+</script>
+</body>
+</html>

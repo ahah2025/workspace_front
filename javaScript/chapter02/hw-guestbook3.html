@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+
+</style>
+
+
+</head>
+
+<body>
+    <div>
+		<form id="guestBookForm" action="/guestbook/add" method="get">
+			<table border="1" width="540px">
+				<tr>
+					<td>이름</td>
+					<td>
+						<input type="text" name="name" value="">
+					</td>
+					<td>비밀번호</td>
+					<td>
+						<input type="password" name="pw" value="">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<textarea cols="72" rows="5" name="content"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4"><button id="btnWrite" type="button">등록</button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<br>
+<!-- -------------------------------------------------------->
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+	console.log('돔트리 완성');
+
+
+	// 폼은 submit 버튼에 클릭이벤트가 아니다
+	//폼은 이벤트를 폼에 등록한다 이벤트명이 submit(O)      click(X)
+	let guestBookForm = document.querySelector('#guestBookForm');
+	console.log(guestBookForm);
+
+	guestBookForm.addEventListener('click',function(event){
+		console.log('등록버튼 클릭');
+
+		//패스워드를 입력하지 않았다
+		//<input type="password" name="pw" value="">
+		let pwTag = document.querySelector('input[name="pw"]');
+		console.log(pwTag);
+
+		let pw = pwTag.value;
+		if(pw == ''){
+			//전송을 멈춰라
+			event.preventDefault();
+
+			window.alert('비밀번호를 입력하세요');
+
+			return false;
+		}
+
+	});
+
+	
+
+
+});	
+</script> 
+</body>
+</html>
