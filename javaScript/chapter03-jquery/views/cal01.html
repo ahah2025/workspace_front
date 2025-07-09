@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link href="../assets/css/cal.css" rel="stylesheet" type="text/css">
+<!--js-->
+<script src="../assets/js/jquery-3.7.1.js"></script>
 
 </head>
 
@@ -44,11 +46,37 @@
 		
 	</div>
 
+<script>
+$(document).ready(function(){
+	console.log('돔트리 완료');
+	
+	let expression = ""; //수식을 저장할 변수
 
+	//버튼을 클릭했을때
+	$('#btnArea button').on('click', function(){
+		let value = $(this).text(); // 버튼의 텍스트를 가져옴
+
+        if (value === "C") {
+            expression = "";
+            $('#display').val('');
+        } else if (value === "=") {
+            try {
+                let result = eval(expression); // 수식 계산
+                $('#display').val(result);
+                expression = result.toString(); // 결과를 다음 계산에 사용
+            } catch (e) {
+                $('#display').val("Error");
+                expression = "";
+            }
+        } else {
+            expression += value;
+            $('#display').val(expression);
+        }		
+	});
+
+});
+
+</script>
 </body>
-
-
-
-
 
 </html>
