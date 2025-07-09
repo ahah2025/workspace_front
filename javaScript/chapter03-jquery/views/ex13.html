@@ -2,9 +2,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
-
 <title>Insert title here</title>
+
+<!--js-->
+<script src="../assets/js/jquery-3.7.1.js"></script>
 </head>
 <body>
 	
@@ -16,6 +17,28 @@
 		<li data-bno="4" data-pno="3"><strong>네번째 아이템입니다.</strong></li>
 	</ul>
 	<button>버튼</button>
+
+
+<!---------------------------------->
+<script>
+$(document).ready(function(){
+	console.log('돔트리완료');
+
+	let fiTag = $('#first');
+	console.log(fiTag.className);
+
+	let seTag = document.querySelector('#second');
+	console.log(seTag);
+	//console.log(seTag.attr('class'));
+
+	let thTag = $('#third');
+	console.log(thTag);
+
+
+
+
+});	
+</script>
 </body>
 
 

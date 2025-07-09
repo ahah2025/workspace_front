@@ -2,16 +2,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
+<title>Insert title here</title>
 <style>
 	.red {color: red; font-size: 20px; font-weight: bold;}
-	
 	.blue {color: blue; font-size: 50px; border: 1px solid black;}
 
 </style>
-
-
-<title>Insert title here</title>
+<!--css-->
+<!--js-->
+<script src="../assets/js/jquery-3.7.1.js"></script>
 </head>
 
 <body>
@@ -25,6 +24,23 @@
 		<li>다섯번째 아이템입니다.</li>
 	</ul>
 
+<!------------------------------->
+<script>
+$(document).ready(function(){
+	console.log('돔트리완료');
+
+	let fiTag = $('#first');
+	console.log(fiTag);
+	//fiTag.removeClass('red');
+	//fiTag.addClass('blue');
+	fiTag.removeClass();
+
+
+});
+
+
+
+</script>
 </body>
 
 
