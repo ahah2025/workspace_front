@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
-
-
 <title>Insert title here</title>
+<!--css-->
+<!--js-->
+<script src="../assets/js/jquery-3.7.1.js"></script>
 </head>
 
 <body>
@@ -18,7 +19,16 @@
 		<li>다섯 번째 아이템입니다.</li>
 	</ul>
 
-</body>
+<!-- ------------------------------------------------------>	
+<script>
+$(document).ready(function(){
+	console.log('돔트리 완료');
 
+	let liTags = $('li');
+	liTags.remove($('.del'));
+	
+});	
+</script>
+</body>
 
 </html>

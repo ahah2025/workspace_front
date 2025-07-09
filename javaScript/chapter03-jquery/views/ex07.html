@@ -2,18 +2,50 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
-
 <title>Insert title here</title>
+
+<!--js-->
+<script src="../assets/js/jquery-3.7.1.js"></script>
 </head>
 
 <body>
 	
-	<!--prepend(), append()-->
-	<p id="p1">마바사아자차카타파하</p>
-	<p id="p2">마바사아자차카타파하</p>
+	<!--prepend(내용 앞), append(내용 뒤)-->
+	<p id="p1">
+		<!--afterbegin-->
+		마바사아자차카타파하
+	</p>
+	<p id="p2">
+		<!--beforeend-->
+		마바사아자차카타파하
+
+	</p>
+
+<!-- ------------------------------------------------------>	
+<script>
+$(document).ready(function(){
+	console.log('돔트리 완료');
+
+	let p1Tag = $('#p1');
+	console.log(p1Tag);
+
+	//내용 앞에 html문자열을 추가한다
+	p1Tag.prepend('<strong>가</strong>나다라');
+
+	//내용 뒤에 html 문자열을 추가한다
+	p1Tag.append('abcd');
+	
+	//////////////////////////
+	//마바사아자차카타파하(네이버)    네이버 클릭하면 이동되도록
+	let str = '<a href ="https://www.naver.com/" >(네이버)</a>';
+
+	let p2Tag = $('#p2');
+	console.log(p2Tag);
+	p2Tag.append(str);
+
+});	
+</script>
+
 </body>
-
-
 
 </html>

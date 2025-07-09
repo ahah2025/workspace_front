@@ -2,18 +2,39 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
-
 <title>Insert title here</title>
+
+<!--js-->
+<script src="../assets/js/jquery-3.7.1.js"></script>
 </head>
 
 <body>
 	
-	<!--html()-->
+	<!--html() 문자열-->
 	<p id="p1"> abcdefghijklmn </p>
 	<p id="p2"> 학교종이 땡땡땡<br> abcdefg </p>
+
+<!-- ------------------------------------------------------>	
+<script>
+$(document).ready(function(){
+	console.log('돔트리 완료');
+
+	let str = '<strong>가나다라</strong>마바사'
+	let p1Tag = $('#p1');
+	//p1Tag.text(str)
+	p1Tag.html(str);
+
+	///////////////////////////////////////////////////
+	let p2Tag = $('#p2');
+	console.log(p2Tag.html());
+	console.log(p2Tag.text());
+
+	
+
+
+});	
+</script>
+
 </body>
-
-
 
 </html>

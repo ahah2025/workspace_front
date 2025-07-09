@@ -2,8 +2,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
 <title>Insert title here</title>
+
+<!--js-->
+<script src="../assets/js/jquery-3.7.1.js"></script>
+
 </head>
 
 <body>
@@ -27,9 +30,33 @@
 	<input type="text" name="id">
 	<input type="text" name="name">
 	<input type="text" name="password">
-	
+
+<!--Jquery------->	
+<script>
+//돔트리가 완료되었을때
+$(document).ready(function(){
+	console.log('돔트리 완료');
+
+	//속성을 가진 li엘리먼트의 색을 빨간색으로 변경하세요
+	let liTags = $('[class]');
+	console.log(liTags);
+	liTags.css('color','#ff0000');
+
+	//class 의 값이 first 인 li엘리먼트의 색을 파란색으로 변경하세요
+	//$('.first').css('color','blue');
+
+	let fiTags = $('[class="first"]');
+	console.log(fiTags);
+	fiTags.css('color','#0000ff');
+
+	///////////////////////////
+	let Tag = $('[name="password"]')
+	console.log(Tag);
+
+	console.log($('input[name="id"]'));
+});
+
+</script>
 </body>
-
-
 
 </html>
