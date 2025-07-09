@@ -25,24 +25,22 @@
 $(document).ready(function(){
 	console.log('돔트리 완료');
 
-	//let litags = 
+	/*
+	let liTags = document.querySelectorAll('.red');
+	liTags[0].style.color = '#ff0000'
 
-	//class 가 red 인 li엘리먼트의 색을 빨간색으로 변경
+	let liTags =document.getElementsByClassName('red')
+	liTags[0].style.color = '#ff0000'
+	*/
 	let liTags = $('.red');
-	liTags.css('color','red');
-	console.log(liTags);
+	liTags.css('color', '#ff0000');
+	
+	/////////////////////////////////////
+	$('.blue').css('color', '#0000ff');
 
-	//class 가 blue 인 li엘리먼트의 색을 파란색으로 변경
-	$('.blue').css('color','blue');
-
-	//그룹선택자/////////////////////////////////////////
-	$('.red,.blue').css('color','#ff00ff');
-
-	/* 그룹선택자 html
-	tbody>tr>td, thead>tr>th {
-		border: 1px, solid, #ff0000;
-	}
-	*/	
+	/////////////////////////////////////
+	$('.red, .blue').css('color', '#ff00ff')
+	
 
 });
 

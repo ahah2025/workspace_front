@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
+<!--css-->
 <!--js-->
 <script src="../assets/js/jquery-3.7.1.js"></script>
 </head>
@@ -24,17 +24,85 @@
 $(document).ready(function(){
 	console.log('돔트리완료');
 
+	/*
+	//js
+	let fiTag2 = document.querySelector('#first');
+	console.log(fiTag2);
+	console.log(fiTag2.className);
+	*/
+
+	//클릭한 li요소의 컨텐츠(글자)를 변경하세요
+	//방법1
+	//jquery 속성값 가져오기
 	let fiTag = $('#first');
-	console.log(fiTag.className);
+	console.log(fiTag.attr('class'));
+	console.log(fiTag.attr('id'));
 
-	let seTag = document.querySelector('#second');
-	console.log(seTag);
-	//console.log(seTag.attr('class'));
+	//첫번째 li 에 이벤트 등록
+	fiTag.on('click', function(){
+		console.log('클릭');
+	});
 
-	let thTag = $('#third');
-	console.log(thTag);
+	console.log('-----------------------------');
 
+	
+	/*
+	let liTags = $('li');
+	console.log(liTags);
+	liTags.on('click', function(){
+		console.log('li클릭'); //이벤트 등록 확인용
 
+		//li요소중에 이번에 클릭된 특정li를 정확하게 알려준다
+		let $this = $(this);
+		console.log($this);
+
+		//$this 의 내용을 변경해준다
+		$this.text('변경된 문구')
+
+	});
+	*/
+
+	//li태그를 클릭했을때
+	$('li').on('click', function(){
+		console.log('li클릭');   //이벤트 등록 확인용
+
+		//li요소중에 이번에 클릭된 특정 li를 정확하게 알려준다
+		let $this = $(this);
+		console.log($this);
+
+		//$this 의 내용을 변경해준다
+		$this.text('변경된 문구')		
+
+		////////////////////////////////////////////
+		//속성값 출력해보기
+		//id 출력
+		let idName = $this.attr('id');
+		console.log(idName);
+
+		//class 네임 출력
+		let csName = $this.attr('class');
+		console.log(csName);
+
+		//$(this) 의 내용을 변경해준다
+		$this.text('변경된 문구')
+
+		//data 값 가져오기
+		let bno = $this.data('bno');
+		console.log(bno);
+
+		//p-no 값 가져오기
+		let pno = $this.data('pno');
+		console.log(pno);
+
+		//vo
+		let pVO = {
+			bno:bno,
+			pno:pno
+		}
+		console.log(pVO);
+
+	});
+	
 
 
 });	

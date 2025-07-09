@@ -2,8 +2,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
-
 <title>Insert title here</title>
 
 <!--js-->
@@ -30,14 +28,16 @@ $(document).ready(function(){
 
 	let seTag = $('#second');
 	console.log(seTag);
-	
-	$('#second').css('color','yellow');
+	seTag.css('color', '#ff0000');
+	//$('#second').css('color','yellow');
 
 	let thTag = $('#third');
-	$('#third').css('color','red');
 	console.log(thTag);
+	thTag.css('color', '#0000ff');
+	//$('#third').css('color','red');
+	
 
-	let firTag = $('#first'); 	//맨위에 하나만 적용가능
+	let firTag = $('#first'); 	//맨위1개만 적용-->id는 이름이 겹치게 쓰지말자
 	console.log(firTag);
 	firTag.css('color','#00ff00');
 

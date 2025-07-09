@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
-
 <title>Insert title here</title>
 
+	<!--css-->
 	<style>
 		ul {
 			background-color: blue; 
@@ -19,6 +19,8 @@
 		
 	</style>
 
+	<!--js-->
+	<script src="../assets/js/jquery-3.7.1.js"></script>
 
 </head>
 <body>
@@ -35,15 +37,83 @@
 	<br>
 	<button id="datBtn" type="button">전체데이터수집</button>
 	
+<!----------------------------------------------------->	
+<script>
+$(document).ready(function(){
+	console.log('돔트리 완료');
+
+	//li 요소추가 버튼을 클릭했을때
+	$('#btn').on('click', function(){ // '클릭'이라는 이벤트 등록
+		console.log('클릭');
+
+		let str = '';
+		str += '<li data-bno="5" data-pname="주우재">다섯번째 아이템입니다.</li>'
+		str += '<li data-bno="6" data-pname="김 숙">여섯번째 아이템입니다.</li>'
+		str += '<li data-bno="7" data-pname="차은우">일곱번째 아이템입니다.</li>'
+		
+		$('ul').append(str);
+
+
+	});
+
+	/*
+	//li태그(요소)를 클릭했을때
+	$('li').on('click',function(){
+		console.log('li태그 클릭');
+		let $this = $(this);	
+		console.log($this);         // jQuery.fn.init {0: li#first.red, length: 1}
+		console.log($this.text());  //첫번째 아이템입니다  두번째 아이템입니다
+
+	});
+	*/
+
+	//ul태그(요소)를 클릭했을때
+	$('ul').on('click', 'li', function(){
+		console.log('클릭');
+		let $this = $(this);
+		console.log($this.text());
+	});
+
+	//전체데이터수집 출력
 	
+	//btnData 클릭했을때
+	$('#btnData').on('click', function(){
+		console.log('버튼 클릭');
+
+		let liTags = $('ul>li');
+		console.log(liTags);
+
+	
+		/*
+		//js 반복문 사용
+		for(let i=0; i<liTags.length; i++){
+			let name = $(liTags[i]).data('pname');
+			console.log(name);
+		}
+		*/
+
+		//jquery 에 반복문 사용
+		liTags.each(function(index, item){
+			//console.log(index);
+			//console.log(item);
+			//item은 자바 스크립트변수 data()를 가지고 있지 않다
+			//item자바스크립트변수를 jquery용으로 변형시킨다. 
+			// data() jquery용으로 js에는 없는함수
+			//item은 괄호() 로 한번 씌워준다
+			let bno = $(item).data('bno');
+			let pname = $(item).data('pname');
+
+			console.log(bno);
+			console.log(pname);
+		});
+
+
+
+	});
+
+});
+</script>	
 	
 </body>
-
-
-
-
-
-
-
 
 </html>

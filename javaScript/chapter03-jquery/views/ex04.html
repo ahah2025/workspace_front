@@ -31,7 +31,7 @@
 	<input type="text" name="name">
 	<input type="text" name="password">
 
-<!--Jquery------->	
+<!--Jquery---------------------------------------------------------->	
 <script>
 //돔트리가 완료되었을때
 $(document).ready(function(){
@@ -45,15 +45,18 @@ $(document).ready(function(){
 	//class 의 값이 first 인 li엘리먼트의 색을 파란색으로 변경하세요
 	//$('.first').css('color','blue');
 
-	let fiTags = $('[class="first"]');
+	let fiTags = $('[class="first"]');  //$('.first')
 	console.log(fiTags);
 	fiTags.css('color','#0000ff');
 
 	///////////////////////////
+
 	let Tag = $('[name="password"]')
 	console.log(Tag);
 
 	console.log($('input[name="id"]'));
+
+	console.log($('input[name]'));
 });
 
 </script>

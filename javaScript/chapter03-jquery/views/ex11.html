@@ -2,15 +2,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
-<!--
+<title>Insert title here</title>
+<!--css-->
 <style>
 	.red {color: red;}
 	.blue {color: blue;}
-</style> -->
+</style> 
 
-<title>Insert title here</title>
-<!--css-->
 <!--js-->
 <script src="../assets/js/jquery-3.7.1.js"></script>
 </head>
@@ -48,12 +46,26 @@ $(document).ready(function(){
 
 	/////////////////////////////////////////////////////
 	//val("값") 넣기
+	/*
 	$('[name="name2"]').val('이 123 아 456 름 789');  
 	$('[name="password2"]').val('2025070900000000000000000000000');
 	$('[name="content2"]').val('컨텐츠 2025-07-09 오전 11시 59분 00:00');
+	*/
+
+	//태그잡아오기
+	let name2Tag = $('[name="name2"]');
+	let pw2Tag = $('[name="password2"]');
+	let tx2Tag = $('[name="content2"]');
+
+	//이름
+	console.log(name2Tag);
+	console.log(name2Tag.val());
+
+	//패스워드
+	console.log(pw2Tag.val());
 
 	//출력
-	//console.log(tx2Tag.val());
+	console.log(tx2Tag.val());
 
 
 });	
