@@ -34,6 +34,9 @@ select  no,
 from rboard
 ;
 
+select *
+from user;
+
 select  u.no,
 		rd.title,
         rd.group_no,
