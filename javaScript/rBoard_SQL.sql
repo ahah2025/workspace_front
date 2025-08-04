@@ -45,6 +45,15 @@ select  u.no,
 from rboard rd, user u
 ;
 
+-- 아이디사용유무체크(회원가입) user.xml
+select 	no,
+		id,
+		name,
+		gender
+from user
+where id= ?
+;
+
 -- 계층형 게시판 만들기
 select * 
 from rboard
